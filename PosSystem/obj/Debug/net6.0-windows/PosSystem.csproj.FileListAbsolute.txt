@@ -1,0 +1,17 @@
+D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\bin\Debug\net6.0-windows\PosSystem.exe
+D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\bin\Debug\net6.0-windows\PosSystem.deps.json
+D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\bin\Debug\net6.0-windows\PosSystem.runtimeconfig.json
+D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\bin\Debug\net6.0-windows\PosSystem.dll
+D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\bin\Debug\net6.0-windows\ref\PosSystem.dll
+D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\bin\Debug\net6.0-windows\PosSystem.pdb
+D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.csproj.AssemblyReference.cache
+D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.AssemblyInfoInputs.cache
+D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.AssemblyInfo.cs
+D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.csproj.CoreCompileInputs.cache
+D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.dll
+D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\ref\PosSystem.dll
+D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.pdb
+D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.genruntimeconfig.cache
+D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.Forms.FormMain.resources
+D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.csproj.GenerateResource.cache
