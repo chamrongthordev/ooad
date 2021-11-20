@@ -73,6 +73,7 @@
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtPassword
             // 
@@ -101,7 +102,6 @@
             this.lblPassword.Size = new System.Drawing.Size(123, 36);
             this.lblPassword.TabIndex = 1;
             this.lblPassword.Text = "Password";
-            this.lblPassword.Click += new System.EventHandler(this.lblPassword_Click);
             // 
             // lblUsername
             // 
