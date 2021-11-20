@@ -38,8 +38,12 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.lblLogo = new System.Windows.Forms.Label();
             this.panelNavBar = new System.Windows.Forms.Panel();
+            this.panelLogout = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.panelLeftSidebar.SuspendLayout();
             this.panelLogo.SuspendLayout();
+            this.panelNavBar.SuspendLayout();
+            this.panelLogout.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelLeftSidebar
@@ -184,12 +188,44 @@
             // 
             this.panelNavBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(187)))), ((int)(((byte)(105)))));
             this.panelNavBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelNavBar.Controls.Add(this.panelLogout);
             this.panelNavBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelNavBar.Location = new System.Drawing.Point(426, 0);
             this.panelNavBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelNavBar.Name = "panelNavBar";
             this.panelNavBar.Size = new System.Drawing.Size(886, 136);
             this.panelNavBar.TabIndex = 1;
+            // 
+            // panelLogout
+            // 
+            this.panelLogout.BackColor = System.Drawing.Color.Transparent;
+            this.panelLogout.Controls.Add(this.btnLogout);
+            this.panelLogout.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelLogout.Location = new System.Drawing.Point(623, 0);
+            this.panelLogout.Name = "panelLogout";
+            this.panelLogout.Padding = new System.Windows.Forms.Padding(5);
+            this.panelLogout.Size = new System.Drawing.Size(261, 134);
+            this.panelLogout.TabIndex = 0;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnLogout.FlatAppearance.BorderSize = 2;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Battambang", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(5, 5);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnLogout.Size = new System.Drawing.Size(253, 124);
+            this.btnLogout.TabIndex = 0;
+            this.btnLogout.Text = "ចា​កចេញ";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            this.btnLogout.MouseHover += new System.EventHandler(this.btnLogout_MouseHover);
             // 
             // FormMain
             // 
@@ -208,6 +244,8 @@
             this.panelLeftSidebar.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
+            this.panelNavBar.ResumeLayout(false);
+            this.panelLogout.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -223,5 +261,7 @@
         private Button btnSale;
         private Button btnUser;
         private Button btnReport;
+        private Panel panelLogout;
+        private Button btnLogout;
     }
 }

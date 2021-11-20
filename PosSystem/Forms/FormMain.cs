@@ -31,5 +31,17 @@ namespace PosSystem.Forms
         {
             btnReport.Cursor = Cursors.Hand;
         }
+
+        private void btnLogout_MouseHover(object sender, EventArgs e)
+        {
+            btnLogout.Cursor = Cursors.Hand;
+            btnLogout.BackColor = Color.ForestGreen;
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new FormLogin().Show();
+        }
     }
 }
