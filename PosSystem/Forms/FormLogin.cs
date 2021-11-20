@@ -29,11 +29,14 @@ namespace PosSystem.Forms
 
             if (isValidCredencial)
             {
-                MessageBox.Show("login");
+                MessageBox.Show("You're login successfully.");
+                
+                Hide();
+                new FormMain().Show();
             }
             else
             {
-                MessageBox.Show("Invalid");
+                MessageBox.Show("Invalid Credencial!");
             }
         }
     }
