@@ -2,12 +2,44 @@
 using PosSystem.Repositories;
 using PosSystem.Configs;
 using PosSystem.Utils;
+using PosSystem.Models;
+using System.Data.SqlClient;
 
 namespace PosSystem.Services.Implement
 {
     public class UserServiceImplement : IUserRepository
     {
-        private readonly DBConnection dBConnection = new DBConnection();
+        private readonly DBConnection conn = DBConnection.GetInstance();
+        /// <summary>
+        /// Get all users as DataTable type
+        /// </summary>
+        /// <returns></returns>
+        public List<User> GetUsers()
+        {
+            conn.connection.Open();
+
+            SqlCommand cmd = new SqlCommand(GenerateCommand.GetAll("[tblUsers]"), conn.connection);
+            SqlDataReader users = cmd.ExecuteReader();
+
+            List<User> usersList = new List<User>();
+            while (users.Read())
+            {
+                int id = int.Parse(users[0].ToString());
+                string userFirstName = users[1].ToString();
+                string userLastName = users[2].ToString();
+                string userUsername = users[3].ToString();
+                string userPassword = users[4].ToString();
+                string userGender = users[5].ToString();
+                string userRole = users[6].ToString();
+
+                User user = new User(id, userFirstName, userLastName, userUsername, userPassword, userGender, userRole);
+                usersList.Add(user);
+            }
+            users.Close();
+            conn.connection.Close();
+
+            return usersList;
+        }
 
         /// <summary>
         /// Return true if this credential has data in the database.
@@ -17,9 +49,29 @@ namespace PosSystem.Services.Implement
         /// <returns></returns>
         public bool ValidateLogin(string username, string password)
         {
-            DataTable users = dBConnection.ExecuteSqlCommand(GenerateCommand.GetAllWhereTwoColumn("[tblUsers]", "[User_Username]", username, "[User_Password]", password));
-            
-            return users.Rows.Count > 0;
+            conn.connection.Open();
+
+            SqlCommand cmd = new SqlCommand(GenerateCommand.GetAllWhereTwoColumn("[tblUsers]", "[User_Username]", username, "[User_Password]", password), conn.connection);
+            SqlDataReader users = cmd.ExecuteReader();
+
+            List<User> usersList = new List<User>();
+            while (users.Read())
+            {
+                int id = int.Parse(users[0].ToString());
+                string userFirstName = users[1].ToString();
+                string userLastName = users[2].ToString();
+                string userUsername = users[3].ToString();
+                string userPassword = users[4].ToString();
+                string userGender = users[5].ToString();
+                string userRole = users[6].ToString();
+
+                User user = new User(id, userFirstName, userLastName, userUsername, userPassword, userGender, userRole);
+                usersList.Add(user);
+            }
+            users.Close();
+            conn.connection.Close();
+
+            return usersList.Count > 0;
         }
     }
 }

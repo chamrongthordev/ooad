@@ -8,25 +8,24 @@ namespace PosSystem.Models
 {
     public class User
     {
-        public User(int iD, string firstName, string lastName, string nameKH, string email, string password, string gender, string role)
+        public User() {}
+        public User(int iD, string firstName, string lastName, string username, string password, string gender, string role)
         {
             _ID = iD;
             _FirstName = firstName;
             _LastName = lastName;
-            _NameKH = nameKH;
-            _Email = email;
+            _Username = username;
             _Password = password;
             _Gender = gender;
             _Role = role;
         }
 
-        private int _ID { get; set; }
-        private string _FirstName { get; set; }
-        private string _LastName { get; set; }
-        private string _NameKH { get; set; }
-        private string _Email { get; set; }
-        private string _Password { get; set; }
-        private string _Gender { get; set; }
-        private string _Role { get; set; }
+        public int _ID { get; set; }
+        public string _FirstName { get; set; }
+        public string _LastName { get; set; }
+        public string _Username { get; set; }
+        public string _Password { get; set; }
+        public string _Gender { get; set; }
+        public string _Role { get; set; }
     }
 }
