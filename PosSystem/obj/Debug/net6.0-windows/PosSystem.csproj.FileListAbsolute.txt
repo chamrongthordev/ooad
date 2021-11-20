@@ -15,3 +15,5 @@ D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\Pos
 D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.genruntimeconfig.cache
 D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.Forms.FormMain.resources
 D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.csproj.GenerateResource.cache
+D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.Forms.FormLogin.resources
+D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.Properties.Resources.resources

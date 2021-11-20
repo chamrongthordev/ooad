@@ -11,7 +11,7 @@ namespace PosSystem
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new FormMain());
+            Application.Run(new FormLogin());
         }
     }
 }

@@ -16,5 +16,14 @@ namespace PosSystem.Forms
         {
             InitializeComponent();
         }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void lblPassword_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
