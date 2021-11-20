@@ -45,6 +45,7 @@
             this.PanelBtnLoadStockFormWrapper = new System.Windows.Forms.Panel();
             this.btnLoadStockForm = new System.Windows.Forms.Button();
             this.lblMainTopTitle = new System.Windows.Forms.Label();
+            this.panelChartTracking = new System.Windows.Forms.Panel();
             this.panelLeftSidebar.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelNavBar.SuspendLayout();
@@ -239,6 +240,7 @@
             // 
             this.panelMain.AutoScroll = true;
             this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.panelMain.Controls.Add(this.panelChartTracking);
             this.panelMain.Controls.Add(this.panelMainTitle);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(426, 136);
@@ -288,9 +290,17 @@
             this.lblMainTopTitle.Font = new System.Drawing.Font("Battambang", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblMainTopTitle.Location = new System.Drawing.Point(49, 40);
             this.lblMainTopTitle.Name = "lblMainTopTitle";
-            this.lblMainTopTitle.Size = new System.Drawing.Size(147, 70);
+            this.lblMainTopTitle.Size = new System.Drawing.Size(145, 68);
             this.lblMainTopTitle.TabIndex = 0;
             this.lblMainTopTitle.Text = "ទិន្នន័យ";
+            // 
+            // panelChartTracking
+            // 
+            this.panelChartTracking.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChartTracking.Location = new System.Drawing.Point(0, 152);
+            this.panelChartTracking.Name = "panelChartTracking";
+            this.panelChartTracking.Size = new System.Drawing.Size(886, 670);
+            this.panelChartTracking.TabIndex = 1;
             // 
             // FormMain
             // 
@@ -338,5 +348,6 @@
         private Label lblMainTopTitle;
         private Panel PanelBtnLoadStockFormWrapper;
         private Button btnLoadStockForm;
+        private Panel panelChartTracking;
     }
 }
