@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace PosSystem.Repositories
 {
-    public interface ICrud
+    public interface ICrud<T> where T : class
     {
-        public DataTable GetUsers();
+        public List<T> GetUsers();
     }
 }
