@@ -76,6 +76,7 @@
             this.btnReport.TabIndex = 5;
             this.btnReport.Text = "របា​យកា​រណ៍";
             this.btnReport.UseVisualStyleBackColor = false;
+            this.btnReport.MouseHover += new System.EventHandler(this.btnReport_MouseHover);
             // 
             // btnUser
             // 
@@ -94,6 +95,7 @@
             this.btnUser.TabIndex = 4;
             this.btnUser.Text = "អ្នកប្រើប្រា​ស់";
             this.btnUser.UseVisualStyleBackColor = false;
+            this.btnUser.MouseHover += new System.EventHandler(this.btnUser_MouseHover);
             // 
             // btnSale
             // 
@@ -112,6 +114,7 @@
             this.btnSale.TabIndex = 3;
             this.btnSale.Text = " កា​រលក់";
             this.btnSale.UseVisualStyleBackColor = false;
+            this.btnSale.MouseHover += new System.EventHandler(this.btnSale_MouseHover);
             // 
             // btnStock
             // 
@@ -130,6 +133,7 @@
             this.btnStock.TabIndex = 2;
             this.btnStock.Text = "ស្តុក";
             this.btnStock.UseVisualStyleBackColor = false;
+            this.btnStock.MouseHover += new System.EventHandler(this.btnStock_MouseHover);
             // 
             // btnDashboard
             // 
