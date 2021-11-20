@@ -40,10 +40,18 @@
             this.panelNavBar = new System.Windows.Forms.Panel();
             this.panelLogout = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.panelMain = new System.Windows.Forms.Panel();
+            this.panelMainTitle = new System.Windows.Forms.Panel();
+            this.PanelBtnLoadStockFormWrapper = new System.Windows.Forms.Panel();
+            this.btnLoadStockForm = new System.Windows.Forms.Button();
+            this.lblMainTopTitle = new System.Windows.Forms.Label();
             this.panelLeftSidebar.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelNavBar.SuspendLayout();
             this.panelLogout.SuspendLayout();
+            this.panelMain.SuspendLayout();
+            this.panelMainTitle.SuspendLayout();
+            this.PanelBtnLoadStockFormWrapper.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelLeftSidebar
@@ -227,11 +235,69 @@
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             this.btnLogout.MouseHover += new System.EventHandler(this.btnLogout_MouseHover);
             // 
+            // panelMain
+            // 
+            this.panelMain.AutoScroll = true;
+            this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.panelMain.Controls.Add(this.panelMainTitle);
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Location = new System.Drawing.Point(426, 136);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(886, 822);
+            this.panelMain.TabIndex = 2;
+            // 
+            // panelMainTitle
+            // 
+            this.panelMainTitle.BackColor = System.Drawing.Color.White;
+            this.panelMainTitle.Controls.Add(this.PanelBtnLoadStockFormWrapper);
+            this.panelMainTitle.Controls.Add(this.lblMainTopTitle);
+            this.panelMainTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelMainTitle.Location = new System.Drawing.Point(0, 0);
+            this.panelMainTitle.Name = "panelMainTitle";
+            this.panelMainTitle.Size = new System.Drawing.Size(886, 152);
+            this.panelMainTitle.TabIndex = 0;
+            // 
+            // PanelBtnLoadStockFormWrapper
+            // 
+            this.PanelBtnLoadStockFormWrapper.Controls.Add(this.btnLoadStockForm);
+            this.PanelBtnLoadStockFormWrapper.Dock = System.Windows.Forms.DockStyle.Right;
+            this.PanelBtnLoadStockFormWrapper.Location = new System.Drawing.Point(564, 0);
+            this.PanelBtnLoadStockFormWrapper.Name = "PanelBtnLoadStockFormWrapper";
+            this.PanelBtnLoadStockFormWrapper.Padding = new System.Windows.Forms.Padding(0, 40, 20, 40);
+            this.PanelBtnLoadStockFormWrapper.Size = new System.Drawing.Size(322, 152);
+            this.PanelBtnLoadStockFormWrapper.TabIndex = 2;
+            // 
+            // btnLoadStockForm
+            // 
+            this.btnLoadStockForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(114)))), ((int)(((byte)(215)))));
+            this.btnLoadStockForm.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnLoadStockForm.Font = new System.Drawing.Font("Battambang", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnLoadStockForm.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnLoadStockForm.Location = new System.Drawing.Point(23, 40);
+            this.btnLoadStockForm.Name = "btnLoadStockForm";
+            this.btnLoadStockForm.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.btnLoadStockForm.Size = new System.Drawing.Size(279, 72);
+            this.btnLoadStockForm.TabIndex = 2;
+            this.btnLoadStockForm.Text = "ពិនិត្យមើលផលិតផលក្នុងស្តុក";
+            this.btnLoadStockForm.UseVisualStyleBackColor = false;
+            this.btnLoadStockForm.MouseHover += new System.EventHandler(this.btnLoadStockForm_MouseHover);
+            // 
+            // lblMainTopTitle
+            // 
+            this.lblMainTopTitle.AutoSize = true;
+            this.lblMainTopTitle.Font = new System.Drawing.Font("Battambang", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblMainTopTitle.Location = new System.Drawing.Point(49, 40);
+            this.lblMainTopTitle.Name = "lblMainTopTitle";
+            this.lblMainTopTitle.Size = new System.Drawing.Size(147, 70);
+            this.lblMainTopTitle.TabIndex = 0;
+            this.lblMainTopTitle.Text = "ទិន្នន័យ";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1312, 958);
+            this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelNavBar);
             this.Controls.Add(this.panelLeftSidebar);
             this.Font = new System.Drawing.Font("Battambang", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -246,6 +312,10 @@
             this.panelLogo.PerformLayout();
             this.panelNavBar.ResumeLayout(false);
             this.panelLogout.ResumeLayout(false);
+            this.panelMain.ResumeLayout(false);
+            this.panelMainTitle.ResumeLayout(false);
+            this.panelMainTitle.PerformLayout();
+            this.PanelBtnLoadStockFormWrapper.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -263,5 +333,10 @@
         private Button btnReport;
         private Panel panelLogout;
         private Button btnLogout;
+        private Panel panelMain;
+        private Panel panelMainTitle;
+        private Label lblMainTopTitle;
+        private Panel PanelBtnLoadStockFormWrapper;
+        private Button btnLoadStockForm;
     }
 }

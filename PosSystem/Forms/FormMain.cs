@@ -43,5 +43,10 @@ namespace PosSystem.Forms
             Hide();
             new FormLogin().Show();
         }
+
+        private void btnLoadStockForm_MouseHover(object sender, EventArgs e)
+        {
+            btnLoadStockForm.Cursor = Cursors.Hand;
+        }
     }
 }
