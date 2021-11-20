@@ -48,5 +48,11 @@ namespace PosSystem.Forms
         {
             btnLoadStockForm.Cursor = Cursors.Hand;
         }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new FormUser().Show();
+        }
     }
 }

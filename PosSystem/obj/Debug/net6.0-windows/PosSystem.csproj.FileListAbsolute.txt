@@ -25,3 +25,4 @@ D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\bin\Debug\net6.0-windows\run
 D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.csproj.CopyComplete
+D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.Forms.FormUser.resources

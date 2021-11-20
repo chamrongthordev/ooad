@@ -41,11 +41,11 @@
             this.panelLogout = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.panelChartTracking = new System.Windows.Forms.Panel();
             this.panelMainTitle = new System.Windows.Forms.Panel();
             this.PanelBtnLoadStockFormWrapper = new System.Windows.Forms.Panel();
             this.btnLoadStockForm = new System.Windows.Forms.Button();
             this.lblMainTopTitle = new System.Windows.Forms.Label();
-            this.panelChartTracking = new System.Windows.Forms.Panel();
             this.panelLeftSidebar.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelNavBar.SuspendLayout();
@@ -108,6 +108,7 @@
             this.btnUser.TabIndex = 4;
             this.btnUser.Text = "អ្នកប្រើប្រា​ស់";
             this.btnUser.UseVisualStyleBackColor = false;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             this.btnUser.MouseHover += new System.EventHandler(this.btnUser_MouseHover);
             // 
             // btnSale
@@ -248,6 +249,14 @@
             this.panelMain.Size = new System.Drawing.Size(886, 822);
             this.panelMain.TabIndex = 2;
             // 
+            // panelChartTracking
+            // 
+            this.panelChartTracking.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChartTracking.Location = new System.Drawing.Point(0, 152);
+            this.panelChartTracking.Name = "panelChartTracking";
+            this.panelChartTracking.Size = new System.Drawing.Size(886, 670);
+            this.panelChartTracking.TabIndex = 1;
+            // 
             // panelMainTitle
             // 
             this.panelMainTitle.BackColor = System.Drawing.Color.White;
@@ -293,14 +302,6 @@
             this.lblMainTopTitle.Size = new System.Drawing.Size(145, 68);
             this.lblMainTopTitle.TabIndex = 0;
             this.lblMainTopTitle.Text = "ទិន្នន័យ";
-            // 
-            // panelChartTracking
-            // 
-            this.panelChartTracking.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChartTracking.Location = new System.Drawing.Point(0, 152);
-            this.panelChartTracking.Name = "panelChartTracking";
-            this.panelChartTracking.Size = new System.Drawing.Size(886, 670);
-            this.panelChartTracking.TabIndex = 1;
             // 
             // FormMain
             // 
