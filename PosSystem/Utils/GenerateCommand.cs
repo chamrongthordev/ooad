@@ -64,5 +64,10 @@ namespace PosSystem.Utils
         {
             return $"SELECT * FROM {tableName};";
         }
+
+        public static string SaveUser(string tableName, string firstName, string lastName, string username, string password, string gender, string role, string image)
+        {
+            return $"INSERT INTO ([User_FirstName], [User_LastName], [User_Username], [User_Password], [User_Gender], [User_Role], [User_Image]) VALUES[{tableName}] ([{firstName}], [{lastName}], [{username}], [{password}], [{gender}], [{gender}], [{role}] [{image}])";
+        }
     }
 }

@@ -12,5 +12,6 @@ namespace PosSystem.Repositories
     {
         public List<T> GetUsers();
         public List<T> FilterUsers(string column, string value);
+        public void Save(T TObject);
     }
 }

@@ -11,5 +11,8 @@
     <Compile Update="Forms\FormUser.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Utils\FormMessageBoxInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

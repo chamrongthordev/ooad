@@ -51,6 +51,12 @@ namespace PosSystem.Services.Implement
             return usersList;
         }
 
+        /// <summary>
+        /// Filter Data
+        /// </summary>
+        /// <param name="column"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public List<User> FilterUsers(string column, string value)
         {
             conn.connection.Open();
@@ -59,6 +65,61 @@ namespace PosSystem.Services.Implement
             try
             {
                 SqlCommand cmd = new SqlCommand(GenerateCommand.FilterByTwoColumn("[tblUsers]", column, value, "[User_Status]", "1"), conn.connection);
+                SqlDataReader users = cmd.ExecuteReader();
+
+                while (users.Read())
+                {
+                    int id = int.Parse(users[0].ToString());
+                    string userFirstName = users[1].ToString();
+                    string userLastName = users[2].ToString();
+                    string userUsername = users[3].ToString();
+                    string userPassword = users[4].ToString();
+                    string userGender = users[5].ToString();
+                    string userRole = users[6].ToString();
+                    string userImage = users[7].ToString();
+                    bool userStatus = bool.Parse(users[8].ToString());
+
+                    User user = new User(id, userFirstName, userLastName, userUsername, userPassword, userGender, userRole, userImage, userStatus);
+                    usersList.Add(user);
+                }
+                users.Close();
+                conn.connection.Close();
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show(e.ToString());
+            }
+
+            return usersList;
+        }
+
+        public void Save(User user)
+        {
+            conn.connection.Open();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand(GenerateCommand.SaveUser("tblUsers", user._FirstName, user._LastName, user._Username, user._Password, user._Gender, user._Role, user._Image), conn.connection);
+                
+                conn.connection.Close();
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show(e.ToString());
+            }
+
+        }
+
+        public List<User> FindUsername(string username)
+        {
+            conn.connection.Open();
+            List<User> usersList = new List<User>();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand(GenerateCommand.GetAllWhereTwoColumn("[tblUsers]", "[User_Username]", username, "[User_Status]", "1"), conn.connection);
                 SqlDataReader users = cmd.ExecuteReader();
 
                 while (users.Read())

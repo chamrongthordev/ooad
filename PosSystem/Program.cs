@@ -1,4 +1,5 @@
 using PosSystem.Forms;
+using PosSystem.Utils;
 
 namespace PosSystem
 {
@@ -11,7 +12,8 @@ namespace PosSystem
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new FormLogin());
+            Application.Run(new FormMessageBoxInfo());
         }
+
     }
 }

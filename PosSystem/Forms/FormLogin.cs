@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PosSystem.Services;
+using PosSystem.Utils;
 
 namespace PosSystem.Forms
 {
     public partial class FormLogin : Form
     {
+        private FormMessageBoxInfo messageBoxInfo = new FormMessageBoxInfo();
         public FormLogin()
         {
             InitializeComponent();
@@ -25,22 +27,26 @@ namespace PosSystem.Forms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            
             var userService = UserService.getInstance();
             bool isValidCredencial = userService.UserRepository.ValidateLogin(txtUsername.Text.Trim(), txtPassword.Text.Trim());
 
             if (isValidCredencial)
             {
-                MessageBox.Show("You're login successfully.");
-                
                 Hide();
                 new FormMain().Show();
+
+                messageBoxInfo.SetInfo("ស្វា​គមន៍មកកា​ន់ ប្រព័ន្ធគ្រប់គ្រងកា​រលក់", "success");
+                messageBoxInfo.Show();
             }
             else
             {
-                MessageBox.Show("Invalid Credencial!");
                 txtUsername.BackColor = Color.Red;
                 txtPassword.BackColor = Color.Red;
                 txtUsername.Focus();
+
+                messageBoxInfo.SetInfo("ព័ត៌មា​នមិនត្រឹមត្រូវ", "danger");
+                messageBoxInfo.Show();
             }
         }
 

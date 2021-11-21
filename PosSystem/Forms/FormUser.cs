@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PosSystem.Utils;
 
 namespace PosSystem.Forms
 {
@@ -148,17 +149,43 @@ namespace PosSystem.Forms
             btnDelete.Cursor = Cursors.Hand;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Image File(*.jpg, *png) | *.png; *.jpg";
-            DialogResult result = openFileDialog.ShowDialog();
-            if (result == DialogResult.OK)
+            FormMessageBoxInfo formMessageBoxInfo = new FormMessageBoxInfo();
+            
+            if(txtUsername.Text == "")
             {
-                Image image = Image.FromFile(openFileDialog.FileName);
-                pictureBoxProfile.Image = image;
+
+                formMessageBoxInfo.SetInfo("សូមបញ្ចូល គណនេយ្យ", "warning");
+                formMessageBoxInfo.ShowDialog();
             }
+
+            else if (txtLastName.Text == "")
+            {
+                formMessageBoxInfo.SetInfo("សូមបញ្ចូល នា​មត្រកូល", "warning");
+                formMessageBoxInfo.ShowDialog();
+            }
+
+            else if (txtFirstName.Text == "")
+            {
+                formMessageBoxInfo.SetInfo("សូមបញ្ចូល នា​មខ្លួន", "warning");
+                formMessageBoxInfo.ShowDialog();
+            }
+
+            else if(txtPassword.Text == "")
+            {
+                formMessageBoxInfo.SetInfo("សូមបញ្ចូល លេខសម្ងា​ត់", "warning");
+                formMessageBoxInfo.ShowDialog();
+            }
+
+            // validate username
+            List<User> users = _userService.UserRepository.FindUsername(txtUsername.Text);
+            if(users.Count > 0)
+            {
+                formMessageBoxInfo.SetInfo("គណនេយ្យនេះត្រូវបា​នប្រើប្រា​ស់រួចហើយ", "danger");
+                formMessageBoxInfo.ShowDialog();
+            }
+
         }
     }
 }
