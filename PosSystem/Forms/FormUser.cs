@@ -63,7 +63,7 @@ namespace PosSystem.Forms
             List<User> users = _userService.UserRepository.GetUsers();
             foreach (User user in users)
             {
-                Image picture = Image.FromFile(@"D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\bin\Debug\net6.0-windows\Image\chamrong-profile.jpg");
+                Image picture = Image.FromFile(user._Image.ToString());
                 string username = user._Username.ToString();
                 string lastName = user._LastName.ToString();
                 string firstName = user._FirstName.ToString();
