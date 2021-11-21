@@ -61,6 +61,8 @@ namespace PosSystem.Forms
         private void FormUser_Load(object sender, EventArgs e)
         {
             comboSearchBy.SelectedIndex = 0;
+            comboGender.SelectedIndex = 0;
+            comboxRole.SelectedIndex = 0;
             _GetAllUsers();
         }
 
