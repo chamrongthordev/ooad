@@ -74,7 +74,7 @@ namespace PosSystem.Forms
             btnSearch.Cursor = Cursors.Hand;
         }
 
-        //Get all users
+        // Get all users
         private void _GetAllUsers()
         {
             dgvUser.Rows.Clear();
@@ -94,34 +94,10 @@ namespace PosSystem.Forms
             }
         }
 
-        // Filter users
-        private void _GetAllUsersByFilterColomun()
+        // filter by Users
+        private void _FilterUserLogins()
         {
-            switch (comboSearchBy.SelectedIndex)
-            {
-                case 0:
-                    {
-                        _RetreiveData("[User_Username]", txtSearchBox.Text);
-                        break;
-                    }
-                case 1:
-                    {
-                        _RetreiveData("[User_LastName]", txtSearchBox.Text);
-                        break;
-                    }
-
-                case 2:
-                    {
-                        _RetreiveData("[User_FirstName]", txtSearchBox.Text);
-                        break;
-                    }
-            }
-        }
-
-        // Get user data by filter specific column method 
-        private void _RetreiveData(string columnName, string searchTerm)
-        {
-            List<User> users = _userService.UserRepository.FilterUsers(columnName, searchTerm);
+            List<User> users = _userService.UserRepository.FilterUsers("[User_Username]", txtSearchBox.Text);
             dgvUser.Rows.Clear();
             foreach (User user in users)
             {
@@ -140,16 +116,7 @@ namespace PosSystem.Forms
 
         private void txtSearchBox_KeyUp(object sender, KeyEventArgs e)
         {
-           
-            if(txtSearchBox.Text == "")
-            {
-                _GetAllUsers();
-            }
-            else
-            {
-                _GetAllUsersByFilterColomun();
-            }
+            _FilterUserLogins();
         }
-
     }
 }
