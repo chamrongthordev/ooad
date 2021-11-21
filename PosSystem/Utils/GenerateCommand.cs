@@ -34,6 +34,11 @@ namespace PosSystem.Utils
             return $"SELECT * FROM {tableName} WHERE {columnName1} = '{value1}' AND {columnName2} = '{value2}';";
         }
 
+        public static string FilterByTwoColumn(string tableName, string columnName1, string value1, string columnName2, string value2)
+        {
+            return $"SELECT * FROM {tableName} WHERE {columnName1} LIKE '{value1}%' AND {columnName2} = '{value2}';";
+        }
+
         /// <summary>
         /// 
         /// </summary>

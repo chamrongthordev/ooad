@@ -77,6 +77,7 @@ namespace PosSystem.Forms
         //Get all users
         private void _GetAllUsers()
         {
+            dgvUser.Rows.Clear();
             List<User> users = _userService.UserRepository.GetUsers();
             foreach (User user in users)
             {
@@ -92,5 +93,63 @@ namespace PosSystem.Forms
                 dgvUser.Rows.Add(picture, username, lastName, firstName, gender, role, btnDelete, btnUpdate);
             }
         }
+
+        // Filter users
+        private void _GetAllUsersByFilterColomun()
+        {
+            switch (comboSearchBy.SelectedIndex)
+            {
+                case 0:
+                    {
+                        _RetreiveData("[User_Username]", txtSearchBox.Text);
+                        break;
+                    }
+                case 1:
+                    {
+                        _RetreiveData("[User_LastName]", txtSearchBox.Text);
+                        break;
+                    }
+
+                case 2:
+                    {
+                        _RetreiveData("[User_FirstName]", txtSearchBox.Text);
+                        break;
+                    }
+            }
+        }
+
+        // Get user data by filter specific column method 
+        private void _RetreiveData(string columnName, string searchTerm)
+        {
+            List<User> users = _userService.UserRepository.FilterUsers(columnName, searchTerm);
+            dgvUser.Rows.Clear();
+            foreach (User user in users)
+            {
+                Image picture = Image.FromFile(user._Image.ToString());
+                string username = user._Username.ToString();
+                string lastName = user._LastName.ToString();
+                string firstName = user._FirstName.ToString();
+                string gender = user._Gender.ToString();
+                string role = user._Role.ToLower();
+                string btnDelete = "លុប";
+                string btnUpdate = "កែប្រែ";
+
+                dgvUser.Rows.Add(picture, username, lastName, firstName, gender, role, btnDelete, btnUpdate);
+            }
+        }
+
+        private void txtSearchBox_KeyUp(object sender, KeyEventArgs e)
+        {
+           
+            if(txtSearchBox.Text == "")
+            {
+                _GetAllUsers();
+            }
+            else
+            {
+                _GetAllUsersByFilterColomun();
+            }
+        }
+
     }
 }

@@ -11,5 +11,6 @@ namespace PosSystem.Repositories
     public interface ICrud<T> where T : class
     {
         public List<T> GetUsers();
+        public List<T> FilterUsers(string column, string value);
     }
 }

@@ -354,6 +354,7 @@
             this.txtSearchBox.Name = "txtSearchBox";
             this.txtSearchBox.Size = new System.Drawing.Size(156, 44);
             this.txtSearchBox.TabIndex = 2;
+            this.txtSearchBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearchBox_KeyUp);
             // 
             // comboSearchBy
             // 
