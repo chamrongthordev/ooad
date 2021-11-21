@@ -31,8 +31,10 @@ namespace PosSystem.Services.Implement
                 string userPassword = users[4].ToString();
                 string userGender = users[5].ToString();
                 string userRole = users[6].ToString();
+                string userImage = users[7].ToString();
+                bool userStatus = bool.Parse(users[7].ToString());
 
-                User user = new User(id, userFirstName, userLastName, userUsername, userPassword, userGender, userRole);
+                User user = new User(id, userFirstName, userLastName, userUsername, userPassword, userGender, userRole, userImage, userStatus);
                 usersList.Add(user);
             }
             users.Close();
@@ -64,8 +66,10 @@ namespace PosSystem.Services.Implement
                 string userPassword = users[4].ToString();
                 string userGender = users[5].ToString();
                 string userRole = users[6].ToString();
+                string userImage = users[7].ToString();
+                bool userStatus = bool.Parse(users[8].ToString());
 
-                User user = new User(id, userFirstName, userLastName, userUsername, userPassword, userGender, userRole);
+                User user = new User(id, userFirstName, userLastName, userUsername, userPassword, userGender, userRole, userImage, userStatus);
                 usersList.Add(user);
             }
             users.Close();
