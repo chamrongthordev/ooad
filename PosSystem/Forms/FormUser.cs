@@ -53,11 +53,6 @@ namespace PosSystem.Forms
             btnLogout.BackColor = Color.ForestGreen;
         }
 
-        private void btnLoadStockForm_MouseHover(object sender, EventArgs e)
-        {
-            btnLoadStockForm.Cursor = Cursors.Hand;
-        }
-
         private void FormUser_Load(object sender, EventArgs e)
         {
             comboSearchBy.SelectedIndex = 0;
@@ -115,6 +110,55 @@ namespace PosSystem.Forms
         private void txtSearchBox_KeyUp(object sender, KeyEventArgs e)
         {
             _FilterUserLogins();
+        }
+
+        private void dgvUser_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == 0)
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "Image File(*.jpg, *png) | *.png; *.jpg";
+                DialogResult result = openFileDialog.ShowDialog();
+                if(result == DialogResult.OK)
+                {
+                    Image image = Image.FromFile(openFileDialog.FileName);
+                    int row = e.RowIndex;
+                    dgvUser.Rows[row].Cells[0].Value = image;
+                }
+            }
+        }
+
+        private void btnAdd_MouseHover(object sender, EventArgs e)
+        {
+            btnAdd.Cursor = Cursors.Hand;
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdate_MouseHover(object sender, EventArgs e)
+        {
+            btnUpdate.Cursor = Cursors.Hand;
+        }
+
+        private void btnDelete_MouseHover(object sender, EventArgs e)
+        {
+            btnDelete.Cursor = Cursors.Hand;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image File(*.jpg, *png) | *.png; *.jpg";
+            DialogResult result = openFileDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                Image image = Image.FromFile(openFileDialog.FileName);
+                pictureBoxProfile.Image = image;
+            }
         }
     }
 }

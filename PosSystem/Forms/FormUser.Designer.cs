@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUser));
-            this.PanelBtnLoadStockFormWrapper = new System.Windows.Forms.Panel();
-            this.btnLoadStockForm = new System.Windows.Forms.Button();
             this.lblMainTopTitle = new System.Windows.Forms.Label();
             this.panelChartTracking = new System.Windows.Forms.Panel();
             this.panelDataManagement = new System.Windows.Forms.Panel();
@@ -45,6 +43,10 @@
             this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Role = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelManipulator = new System.Windows.Forms.Panel();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
             this.lblGender = new System.Windows.Forms.Label();
             this.comboGender = new System.Windows.Forms.ComboBox();
             this.lblRole = new System.Windows.Forms.Label();
@@ -73,11 +75,11 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.lblLogo = new System.Windows.Forms.Label();
             this.panelLeftSidebar = new System.Windows.Forms.Panel();
-            this.PanelBtnLoadStockFormWrapper.SuspendLayout();
             this.panelChartTracking.SuspendLayout();
             this.panelDataManagement.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.panelManipulator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.panelMainTitle.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.panelLogout.SuspendLayout();
@@ -86,31 +88,6 @@
             this.panelLogo.SuspendLayout();
             this.panelLeftSidebar.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // PanelBtnLoadStockFormWrapper
-            // 
-            this.PanelBtnLoadStockFormWrapper.Controls.Add(this.btnLoadStockForm);
-            this.PanelBtnLoadStockFormWrapper.Dock = System.Windows.Forms.DockStyle.Right;
-            this.PanelBtnLoadStockFormWrapper.Location = new System.Drawing.Point(564, 0);
-            this.PanelBtnLoadStockFormWrapper.Name = "PanelBtnLoadStockFormWrapper";
-            this.PanelBtnLoadStockFormWrapper.Padding = new System.Windows.Forms.Padding(0, 40, 20, 40);
-            this.PanelBtnLoadStockFormWrapper.Size = new System.Drawing.Size(322, 152);
-            this.PanelBtnLoadStockFormWrapper.TabIndex = 2;
-            // 
-            // btnLoadStockForm
-            // 
-            this.btnLoadStockForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(114)))), ((int)(((byte)(215)))));
-            this.btnLoadStockForm.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnLoadStockForm.Font = new System.Drawing.Font("Battambang", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnLoadStockForm.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnLoadStockForm.Location = new System.Drawing.Point(23, 40);
-            this.btnLoadStockForm.Name = "btnLoadStockForm";
-            this.btnLoadStockForm.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.btnLoadStockForm.Size = new System.Drawing.Size(279, 72);
-            this.btnLoadStockForm.TabIndex = 2;
-            this.btnLoadStockForm.Text = "+ បន្ថែមអ្នកប្រើប្រា​ស់";
-            this.btnLoadStockForm.UseVisualStyleBackColor = false;
-            this.btnLoadStockForm.MouseHover += new System.EventHandler(this.btnLoadStockForm_MouseHover);
             // 
             // lblMainTopTitle
             // 
@@ -147,14 +124,14 @@
             this.dgvUser.AllowUserToAddRows = false;
             this.dgvUser.AllowUserToDeleteRows = false;
             this.dgvUser.BackgroundColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Battambang", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Battambang", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvImageUser,
@@ -163,32 +140,33 @@
             this.FirstName,
             this.Gender,
             this.Role});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Battambang", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvUser.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Battambang", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUser.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvUser.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvUser.Location = new System.Drawing.Point(515, 0);
             this.dgvUser.Name = "dgvUser";
             this.dgvUser.ReadOnly = true;
             this.dgvUser.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Battambang", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUser.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Battambang", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUser.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvUser.RowHeadersWidth = 51;
             this.dgvUser.RowTemplate.Height = 29;
             this.dgvUser.Size = new System.Drawing.Size(371, 670);
             this.dgvUser.TabIndex = 10;
+            this.dgvUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_CellClick);
             // 
             // dgvImageUser
             // 
@@ -242,6 +220,10 @@
             // panelManipulator
             // 
             this.panelManipulator.BackColor = System.Drawing.Color.DimGray;
+            this.panelManipulator.Controls.Add(this.btnAdd);
+            this.panelManipulator.Controls.Add(this.btnUpdate);
+            this.panelManipulator.Controls.Add(this.btnDelete);
+            this.panelManipulator.Controls.Add(this.pictureBoxProfile);
             this.panelManipulator.Controls.Add(this.lblGender);
             this.panelManipulator.Controls.Add(this.comboGender);
             this.panelManipulator.Controls.Add(this.lblRole);
@@ -258,6 +240,58 @@
             this.panelManipulator.Name = "panelManipulator";
             this.panelManipulator.Size = new System.Drawing.Size(515, 670);
             this.panelManipulator.TabIndex = 0;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(114)))), ((int)(((byte)(215)))));
+            this.btnAdd.Font = new System.Drawing.Font("Battambang", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAdd.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnAdd.Location = new System.Drawing.Point(36, 393);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.btnAdd.Size = new System.Drawing.Size(272, 62);
+            this.btnAdd.TabIndex = 13;
+            this.btnAdd.Text = "បញ្ចូល";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.MouseHover += new System.EventHandler(this.btnAdd_MouseHover);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnUpdate.Font = new System.Drawing.Font("Battambang", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnUpdate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnUpdate.Location = new System.Drawing.Point(303, 475);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(206, 53);
+            this.btnUpdate.TabIndex = 12;
+            this.btnUpdate.Text = "កែប្រែ";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.btnUpdate.MouseHover += new System.EventHandler(this.btnUpdate_MouseHover);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Maroon;
+            this.btnDelete.Font = new System.Drawing.Font("Battambang", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDelete.Location = new System.Drawing.Point(303, 534);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(206, 53);
+            this.btnDelete.TabIndex = 11;
+            this.btnDelete.Text = "លុប";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.MouseHover += new System.EventHandler(this.btnDelete_MouseHover);
+            // 
+            // pictureBoxProfile
+            // 
+            this.pictureBoxProfile.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxProfile.Image")));
+            this.pictureBoxProfile.Location = new System.Drawing.Point(105, 239);
+            this.pictureBoxProfile.Name = "pictureBoxProfile";
+            this.pictureBoxProfile.Size = new System.Drawing.Size(203, 125);
+            this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxProfile.TabIndex = 10;
+            this.pictureBoxProfile.TabStop = false;
+            this.pictureBoxProfile.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblGender
             // 
@@ -372,7 +406,6 @@
             // panelMainTitle
             // 
             this.panelMainTitle.BackColor = System.Drawing.Color.White;
-            this.panelMainTitle.Controls.Add(this.PanelBtnLoadStockFormWrapper);
             this.panelMainTitle.Controls.Add(this.lblMainTopTitle);
             this.panelMainTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMainTitle.Location = new System.Drawing.Point(0, 0);
@@ -651,12 +684,12 @@
             this.Name = "FormUser";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormUser_Load);
-            this.PanelBtnLoadStockFormWrapper.ResumeLayout(false);
             this.panelChartTracking.ResumeLayout(false);
             this.panelDataManagement.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
             this.panelManipulator.ResumeLayout(false);
             this.panelManipulator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
             this.panelMainTitle.ResumeLayout(false);
             this.panelMainTitle.PerformLayout();
             this.panelMain.ResumeLayout(false);
@@ -672,9 +705,6 @@
         }
 
         #endregion
-
-        private Panel PanelBtnLoadStockFormWrapper;
-        private Button btnLoadStockForm;
         private Label lblMainTopTitle;
         private Panel panelChartTracking;
         private Panel panelMainTitle;
@@ -714,5 +744,9 @@
         private ComboBox comboxRole;
         private Label lblGender;
         private ComboBox comboGender;
+        private PictureBox pictureBoxProfile;
+        private Button btnUpdate;
+        private Button btnDelete;
+        private Button btnAdd;
     }
 }
