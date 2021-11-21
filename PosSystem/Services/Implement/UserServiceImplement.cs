@@ -64,7 +64,7 @@ namespace PosSystem.Services.Implement
 
             try
             {
-                SqlCommand cmd = new SqlCommand(GenerateCommand.GetAllWhereTwoColumn("[tblUsers]", "[User_Username]", username, "[User_Password]", password), conn.connection);
+                SqlCommand cmd = new SqlCommand(GenerateCommand.GetAllWhereThreeColumn("[tblUsers]", "[User_Username]", username, "[User_Password]", password, "[User_Status]", "1"), conn.connection);
                 SqlDataReader users = cmd.ExecuteReader();
 
 
