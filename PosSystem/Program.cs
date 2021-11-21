@@ -12,7 +12,7 @@ namespace PosSystem
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new FormMessageBoxInfo());
+            Application.Run(new FormLogin());
         }
 
     }

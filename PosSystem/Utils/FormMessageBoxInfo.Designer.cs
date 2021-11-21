@@ -112,7 +112,7 @@
             // 
             // timerCounter
             // 
-            this.timerCounter.Interval = 5000;
+            this.timerCounter.Interval = 3000;
             this.timerCounter.Tick += new System.EventHandler(this.timerCounter_Tick);
             // 
             // FormMessageBoxInfo

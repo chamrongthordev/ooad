@@ -15,8 +15,6 @@ namespace PosSystem.Utils
         public FormMessageBoxInfo()
         {
             InitializeComponent();
-            timerCounter.Start();
-
         }
 
         private void btnClose_MouseHover(object sender, EventArgs e)
@@ -31,6 +29,11 @@ namespace PosSystem.Utils
 
         public void SetInfo(string messageBox, string status)
         {
+            timerCounter.Start();
+            Rectangle workingArea = Screen.GetWorkingArea(this);
+            this.Location = new Point(workingArea.Right - Size.Width,
+                                      workingArea.Bottom - Size.Height);
+
             lblInfo.Text = messageBox;
             switch (status)
             {
@@ -55,6 +58,7 @@ namespace PosSystem.Utils
                         break;
                     }
             }
+
         }
 
         private void timerCounter_Tick(object sender, EventArgs e)
