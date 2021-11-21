@@ -87,10 +87,8 @@ namespace PosSystem.Forms
                 string firstName = user._FirstName.ToString();
                 string gender = user._Gender.ToString();
                 string role = user._Role.ToLower();
-                string btnDelete = "លុប";
-                string btnUpdate = "កែប្រែ";
 
-                dgvUser.Rows.Add(picture, username, lastName, firstName, gender, role, btnDelete, btnUpdate);
+                dgvUser.Rows.Add(picture, username, lastName, firstName, gender, role);
             }
         }
 
@@ -107,10 +105,8 @@ namespace PosSystem.Forms
                 string firstName = user._FirstName.ToString();
                 string gender = user._Gender.ToString();
                 string role = user._Role.ToLower();
-                string btnDelete = "លុប";
-                string btnUpdate = "កែប្រែ";
 
-                dgvUser.Rows.Add(picture, username, lastName, firstName, gender, role, btnDelete, btnUpdate);
+                dgvUser.Rows.Add(picture, username, lastName, firstName, gender, role);
             }
         }
 

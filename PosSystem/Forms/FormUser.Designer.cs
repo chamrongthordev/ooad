@@ -28,25 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUser));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PanelBtnLoadStockFormWrapper = new System.Windows.Forms.Panel();
             this.btnLoadStockForm = new System.Windows.Forms.Button();
             this.lblMainTopTitle = new System.Windows.Forms.Label();
             this.panelChartTracking = new System.Windows.Forms.Panel();
-            this.dgvUser = new System.Windows.Forms.DataGridView();
-            this.dgvImageUser = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Role = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvBtnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dgvBtnUpdate = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.panelDataManagement = new System.Windows.Forms.Panel();
+            this.panelManipulator = new System.Windows.Forms.Panel();
             this.panelMainTitle = new System.Windows.Forms.Panel();
             this.panelMain = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -65,9 +56,16 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.lblLogo = new System.Windows.Forms.Label();
             this.panelLeftSidebar = new System.Windows.Forms.Panel();
+            this.dgvUser = new System.Windows.Forms.DataGridView();
+            this.dgvImageUser = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Role = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PanelBtnLoadStockFormWrapper.SuspendLayout();
             this.panelChartTracking.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
+            this.panelDataManagement.SuspendLayout();
             this.panelMainTitle.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.panelLogout.SuspendLayout();
@@ -75,6 +73,7 @@
             this.panelSearchBy.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelLeftSidebar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelBtnLoadStockFormWrapper
@@ -114,145 +113,31 @@
             // 
             // panelChartTracking
             // 
-            this.panelChartTracking.Controls.Add(this.dgvUser);
+            this.panelChartTracking.Controls.Add(this.panelDataManagement);
             this.panelChartTracking.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChartTracking.Location = new System.Drawing.Point(0, 152);
             this.panelChartTracking.Name = "panelChartTracking";
             this.panelChartTracking.Size = new System.Drawing.Size(886, 670);
             this.panelChartTracking.TabIndex = 1;
             // 
-            // dgvUser
+            // panelDataManagement
             // 
-            this.dgvUser.AllowUserToAddRows = false;
-            this.dgvUser.AllowUserToDeleteRows = false;
-            this.dgvUser.BackgroundColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Battambang", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgvImageUser,
-            this.Username,
-            this.LastName,
-            this.FirstName,
-            this.Gender,
-            this.Role,
-            this.dgvBtnDelete,
-            this.dgvBtnUpdate});
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Battambang", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvUser.DefaultCellStyle = dataGridViewCellStyle14;
-            this.dgvUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvUser.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dgvUser.Location = new System.Drawing.Point(0, 0);
-            this.dgvUser.Name = "dgvUser";
-            this.dgvUser.ReadOnly = true;
-            this.dgvUser.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Battambang", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUser.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
-            this.dgvUser.RowHeadersWidth = 51;
-            this.dgvUser.RowTemplate.Height = 29;
-            this.dgvUser.Size = new System.Drawing.Size(886, 670);
-            this.dgvUser.TabIndex = 0;
+            this.panelDataManagement.BackColor = System.Drawing.Color.Silver;
+            this.panelDataManagement.Controls.Add(this.dgvUser);
+            this.panelDataManagement.Controls.Add(this.panelManipulator);
+            this.panelDataManagement.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDataManagement.Location = new System.Drawing.Point(0, 0);
+            this.panelDataManagement.Name = "panelDataManagement";
+            this.panelDataManagement.Size = new System.Drawing.Size(886, 670);
+            this.panelDataManagement.TabIndex = 0;
             // 
-            // dgvImageUser
+            // panelManipulator
             // 
-            this.dgvImageUser.HeaderText = "រូបភា​ព";
-            this.dgvImageUser.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dgvImageUser.MinimumWidth = 6;
-            this.dgvImageUser.Name = "dgvImageUser";
-            this.dgvImageUser.ReadOnly = true;
-            this.dgvImageUser.Width = 120;
-            // 
-            // Username
-            // 
-            this.Username.HeaderText = "គណនេយ្យ";
-            this.Username.MinimumWidth = 6;
-            this.Username.Name = "Username";
-            this.Username.ReadOnly = true;
-            this.Username.Width = 125;
-            // 
-            // LastName
-            // 
-            this.LastName.HeaderText = "នា​មត្រកូល";
-            this.LastName.MinimumWidth = 6;
-            this.LastName.Name = "LastName";
-            this.LastName.ReadOnly = true;
-            this.LastName.Width = 125;
-            // 
-            // FirstName
-            // 
-            this.FirstName.HeaderText = "នា​មខ្លួន";
-            this.FirstName.MinimumWidth = 6;
-            this.FirstName.Name = "FirstName";
-            this.FirstName.ReadOnly = true;
-            this.FirstName.Width = 125;
-            // 
-            // Gender
-            // 
-            this.Gender.HeaderText = "ភេទ";
-            this.Gender.MinimumWidth = 6;
-            this.Gender.Name = "Gender";
-            this.Gender.ReadOnly = true;
-            this.Gender.Width = 125;
-            // 
-            // Role
-            // 
-            this.Role.HeaderText = "តួរនា​ទី";
-            this.Role.MinimumWidth = 6;
-            this.Role.Name = "Role";
-            this.Role.ReadOnly = true;
-            this.Role.Width = 125;
-            // 
-            // dgvBtnDelete
-            // 
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.OrangeRed;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Battambang", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.IndianRed;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvBtnDelete.DefaultCellStyle = dataGridViewCellStyle12;
-            this.dgvBtnDelete.HeaderText = "ប្រតិបត្តិ";
-            this.dgvBtnDelete.MinimumWidth = 6;
-            this.dgvBtnDelete.Name = "dgvBtnDelete";
-            this.dgvBtnDelete.ReadOnly = true;
-            this.dgvBtnDelete.Text = "លុប";
-            this.dgvBtnDelete.ToolTipText = "ប្រើប្រាស់សម្រាប់លុបទិន្នន័យ";
-            this.dgvBtnDelete.Width = 125;
-            // 
-            // dgvBtnUpdate
-            // 
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.MediumSlateBlue;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Battambang", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            this.dgvBtnUpdate.DefaultCellStyle = dataGridViewCellStyle13;
-            this.dgvBtnUpdate.HeaderText = "ប្រតិបត្តិ";
-            this.dgvBtnUpdate.MinimumWidth = 6;
-            this.dgvBtnUpdate.Name = "dgvBtnUpdate";
-            this.dgvBtnUpdate.ReadOnly = true;
-            this.dgvBtnUpdate.Text = "កែប្រែ";
-            this.dgvBtnUpdate.ToolTipText = "ប្រើប្រាស់សម្រាប់កែប្រែទិន្នន័យ";
-            this.dgvBtnUpdate.Width = 125;
+            this.panelManipulator.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelManipulator.Location = new System.Drawing.Point(0, 0);
+            this.panelManipulator.Name = "panelManipulator";
+            this.panelManipulator.Size = new System.Drawing.Size(515, 670);
+            this.panelManipulator.TabIndex = 0;
             // 
             // panelMainTitle
             // 
@@ -523,6 +408,103 @@
             this.panelLeftSidebar.Size = new System.Drawing.Size(426, 958);
             this.panelLeftSidebar.TabIndex = 3;
             // 
+            // dgvUser
+            // 
+            this.dgvUser.AllowUserToAddRows = false;
+            this.dgvUser.AllowUserToDeleteRows = false;
+            this.dgvUser.BackgroundColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Battambang", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvImageUser,
+            this.Username,
+            this.LastName,
+            this.FirstName,
+            this.Gender,
+            this.Role});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Battambang", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUser.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvUser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvUser.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvUser.Location = new System.Drawing.Point(515, 0);
+            this.dgvUser.Name = "dgvUser";
+            this.dgvUser.ReadOnly = true;
+            this.dgvUser.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Battambang", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUser.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvUser.RowHeadersWidth = 51;
+            this.dgvUser.RowTemplate.Height = 29;
+            this.dgvUser.Size = new System.Drawing.Size(371, 670);
+            this.dgvUser.TabIndex = 10;
+            // 
+            // dgvImageUser
+            // 
+            this.dgvImageUser.HeaderText = "រូបភា​ព";
+            this.dgvImageUser.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dgvImageUser.MinimumWidth = 6;
+            this.dgvImageUser.Name = "dgvImageUser";
+            this.dgvImageUser.ReadOnly = true;
+            this.dgvImageUser.Width = 120;
+            // 
+            // Username
+            // 
+            this.Username.HeaderText = "គណនេយ្យ";
+            this.Username.MinimumWidth = 6;
+            this.Username.Name = "Username";
+            this.Username.ReadOnly = true;
+            this.Username.Width = 125;
+            // 
+            // LastName
+            // 
+            this.LastName.HeaderText = "នា​មត្រកូល";
+            this.LastName.MinimumWidth = 6;
+            this.LastName.Name = "LastName";
+            this.LastName.ReadOnly = true;
+            this.LastName.Width = 125;
+            // 
+            // FirstName
+            // 
+            this.FirstName.HeaderText = "នា​មខ្លួន";
+            this.FirstName.MinimumWidth = 6;
+            this.FirstName.Name = "FirstName";
+            this.FirstName.ReadOnly = true;
+            this.FirstName.Width = 125;
+            // 
+            // Gender
+            // 
+            this.Gender.HeaderText = "ភេទ";
+            this.Gender.MinimumWidth = 6;
+            this.Gender.Name = "Gender";
+            this.Gender.ReadOnly = true;
+            this.Gender.Width = 125;
+            // 
+            // Role
+            // 
+            this.Role.HeaderText = "តួរនា​ទី";
+            this.Role.MinimumWidth = 6;
+            this.Role.Name = "Role";
+            this.Role.ReadOnly = true;
+            this.Role.Width = 125;
+            // 
             // FormUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -538,7 +520,7 @@
             this.Load += new System.EventHandler(this.FormUser_Load);
             this.PanelBtnLoadStockFormWrapper.ResumeLayout(false);
             this.panelChartTracking.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
+            this.panelDataManagement.ResumeLayout(false);
             this.panelMainTitle.ResumeLayout(false);
             this.panelMainTitle.PerformLayout();
             this.panelMain.ResumeLayout(false);
@@ -549,6 +531,7 @@
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             this.panelLeftSidebar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -572,6 +555,13 @@
         private Panel panelLogo;
         private Label lblLogo;
         private Panel panelLeftSidebar;
+        private Panel panelSearchBy;
+        private Label lblSearchBy;
+        private ComboBox comboSearchBy;
+        private TextBox txtSearchBox;
+        private Button btnSearch;
+        private Panel panelDataManagement;
+        private Panel panelManipulator;
         private DataGridView dgvUser;
         private DataGridViewImageColumn dgvImageUser;
         private DataGridViewTextBoxColumn Username;
@@ -579,12 +569,5 @@
         private DataGridViewTextBoxColumn FirstName;
         private DataGridViewTextBoxColumn Gender;
         private DataGridViewTextBoxColumn Role;
-        private DataGridViewButtonColumn dgvBtnDelete;
-        private DataGridViewButtonColumn dgvBtnUpdate;
-        private Panel panelSearchBy;
-        private Label lblSearchBy;
-        private ComboBox comboSearchBy;
-        private TextBox txtSearchBox;
-        private Button btnSearch;
     }
 }
