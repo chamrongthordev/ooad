@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUser));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUser));
             this.PanelBtnLoadStockFormWrapper = new System.Windows.Forms.Panel();
             this.btnLoadStockForm = new System.Windows.Forms.Button();
             this.lblMainTopTitle = new System.Windows.Forms.Label();
@@ -56,8 +58,8 @@
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Role = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnUpdate = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dgvBtnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dgvBtnUpdate = new System.Windows.Forms.DataGridViewButtonColumn();
             this.PanelBtnLoadStockFormWrapper.SuspendLayout();
             this.panelChartTracking.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
@@ -134,30 +136,30 @@
             this.FirstName,
             this.Gender,
             this.Role,
-            this.btnDelete,
-            this.btnUpdate});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Battambang", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvUser.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvBtnDelete,
+            this.dgvBtnUpdate});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Battambang", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUser.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvUser.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvUser.Location = new System.Drawing.Point(0, 0);
             this.dgvUser.Name = "dgvUser";
             this.dgvUser.ReadOnly = true;
             this.dgvUser.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Battambang", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUser.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Battambang", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUser.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvUser.RowHeadersWidth = 51;
             this.dgvUser.RowTemplate.Height = 29;
             this.dgvUser.Size = new System.Drawing.Size(886, 670);
@@ -416,21 +418,39 @@
             this.Role.ReadOnly = true;
             this.Role.Width = 125;
             // 
-            // btnDelete
+            // dgvBtnDelete
             // 
-            this.btnDelete.HeaderText = "លុប";
-            this.btnDelete.MinimumWidth = 6;
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.ReadOnly = true;
-            this.btnDelete.Width = 125;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.OrangeRed;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Battambang", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.IndianRed;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvBtnDelete.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvBtnDelete.HeaderText = "ប្រតិបត្តិ";
+            this.dgvBtnDelete.MinimumWidth = 6;
+            this.dgvBtnDelete.Name = "dgvBtnDelete";
+            this.dgvBtnDelete.ReadOnly = true;
+            this.dgvBtnDelete.Text = "លុប";
+            this.dgvBtnDelete.ToolTipText = "ប្រើប្រាស់សម្រាប់លុបទិន្នន័យ";
+            this.dgvBtnDelete.Width = 125;
             // 
-            // btnUpdate
+            // dgvBtnUpdate
             // 
-            this.btnUpdate.HeaderText = "កែប្រែ";
-            this.btnUpdate.MinimumWidth = 6;
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.ReadOnly = true;
-            this.btnUpdate.Width = 125;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.MediumSlateBlue;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Battambang", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            this.dgvBtnUpdate.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvBtnUpdate.HeaderText = "ប្រតិបត្តិ";
+            this.dgvBtnUpdate.MinimumWidth = 6;
+            this.dgvBtnUpdate.Name = "dgvBtnUpdate";
+            this.dgvBtnUpdate.ReadOnly = true;
+            this.dgvBtnUpdate.Text = "កែប្រែ";
+            this.dgvBtnUpdate.ToolTipText = "ប្រើប្រាស់សម្រាប់កែប្រែទិន្នន័យ";
+            this.dgvBtnUpdate.Width = 125;
             // 
             // FormUser
             // 
@@ -486,7 +506,7 @@
         private DataGridViewTextBoxColumn FirstName;
         private DataGridViewTextBoxColumn Gender;
         private DataGridViewTextBoxColumn Role;
-        private DataGridViewButtonColumn btnDelete;
-        private DataGridViewButtonColumn btnUpdate;
+        private DataGridViewButtonColumn dgvBtnDelete;
+        private DataGridViewButtonColumn dgvBtnUpdate;
     }
 }
