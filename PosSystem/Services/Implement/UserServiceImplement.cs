@@ -17,28 +17,36 @@ namespace PosSystem.Services.Implement
         public List<User> GetUsers()
         {
             conn.connection.Open();
-
-            SqlCommand cmd = new SqlCommand(GenerateCommand.GetAll("[tblUsers]"), conn.connection);
-            SqlDataReader users = cmd.ExecuteReader();
-
             List<User> usersList = new List<User>();
-            while (users.Read())
-            {
-                int id = int.Parse(users[0].ToString());
-                string userFirstName = users[1].ToString();
-                string userLastName = users[2].ToString();
-                string userUsername = users[3].ToString();
-                string userPassword = users[4].ToString();
-                string userGender = users[5].ToString();
-                string userRole = users[6].ToString();
-                string userImage = users[7].ToString();
-                bool userStatus = bool.Parse(users[7].ToString());
 
-                User user = new User(id, userFirstName, userLastName, userUsername, userPassword, userGender, userRole, userImage, userStatus);
-                usersList.Add(user);
+            try
+            {
+                SqlCommand cmd = new SqlCommand(GenerateCommand.GetAll("[tblUsers]"), conn.connection);
+                SqlDataReader users = cmd.ExecuteReader();
+
+                while (users.Read())
+                {
+                    int id = int.Parse(users[0].ToString());
+                    string userFirstName = users[1].ToString();
+                    string userLastName = users[2].ToString();
+                    string userUsername = users[3].ToString();
+                    string userPassword = users[4].ToString();
+                    string userGender = users[5].ToString();
+                    string userRole = users[6].ToString();
+                    string userImage = users[7].ToString();
+                    bool userStatus = bool.Parse(users[8].ToString());
+
+                    User user = new User(id, userFirstName, userLastName, userUsername, userPassword, userGender, userRole, userImage, userStatus);
+                    usersList.Add(user);
+                }
+                users.Close();
+                conn.connection.Close();
             }
-            users.Close();
-            conn.connection.Close();
+            catch (Exception e)
+            {
+
+                MessageBox.Show(e.ToString());
+            }
 
             return usersList;
         }
@@ -52,28 +60,37 @@ namespace PosSystem.Services.Implement
         public bool ValidateLogin(string username, string password)
         {
             conn.connection.Open();
-
-            SqlCommand cmd = new SqlCommand(GenerateCommand.GetAllWhereTwoColumn("[tblUsers]", "[User_Username]", username, "[User_Password]", password), conn.connection);
-            SqlDataReader users = cmd.ExecuteReader();
-
             List<User> usersList = new List<User>();
-            while (users.Read())
-            {
-                int id = int.Parse(users[0].ToString());
-                string userFirstName = users[1].ToString();
-                string userLastName = users[2].ToString();
-                string userUsername = users[3].ToString();
-                string userPassword = users[4].ToString();
-                string userGender = users[5].ToString();
-                string userRole = users[6].ToString();
-                string userImage = users[7].ToString();
-                bool userStatus = bool.Parse(users[8].ToString());
 
-                User user = new User(id, userFirstName, userLastName, userUsername, userPassword, userGender, userRole, userImage, userStatus);
-                usersList.Add(user);
+            try
+            {
+                SqlCommand cmd = new SqlCommand(GenerateCommand.GetAllWhereTwoColumn("[tblUsers]", "[User_Username]", username, "[User_Password]", password), conn.connection);
+                SqlDataReader users = cmd.ExecuteReader();
+
+
+                while (users.Read())
+                {
+                    int id = int.Parse(users[0].ToString());
+                    string userFirstName = users[1].ToString();
+                    string userLastName = users[2].ToString();
+                    string userUsername = users[3].ToString();
+                    string userPassword = users[4].ToString();
+                    string userGender = users[5].ToString();
+                    string userRole = users[6].ToString();
+                    string userImage = users[7].ToString();
+                    bool userStatus = bool.Parse(users[8].ToString());
+
+                    User user = new User(id, userFirstName, userLastName, userUsername, userPassword, userGender, userRole, userImage, userStatus);
+                    usersList.Add(user);
+                }
+                users.Close();
+                conn.connection.Close();
             }
-            users.Close();
-            conn.connection.Close();
+            catch (Exception e)
+            {
+
+                MessageBox.Show(e.ToString());
+            }
 
             return usersList.Count > 0;
         }

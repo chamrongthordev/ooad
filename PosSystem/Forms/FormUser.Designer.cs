@@ -370,10 +370,11 @@
             // dgvImageUser
             // 
             this.dgvImageUser.HeaderText = "រូបភា​ព";
+            this.dgvImageUser.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.dgvImageUser.MinimumWidth = 6;
             this.dgvImageUser.Name = "dgvImageUser";
             this.dgvImageUser.ReadOnly = true;
-            this.dgvImageUser.Width = 125;
+            this.dgvImageUser.Width = 120;
             // 
             // Username
             // 

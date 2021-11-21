@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PosSystem.Models;
+using PosSystem.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,11 @@ namespace PosSystem.Forms
 {
     public partial class FormUser : Form
     {
+        private UserService _userService;
         public FormUser()
         {
             InitializeComponent();
+            _userService = UserService.getInstance();
         }
 
         private void btnDashboard_MouseHover(object sender, EventArgs e)
@@ -56,7 +60,18 @@ namespace PosSystem.Forms
 
         private void FormUser_Load(object sender, EventArgs e)
         {
+            List<User> users = _userService.UserRepository.GetUsers();
+            foreach (User user in users)
+            {
+                Image picture = Image.FromFile(@"D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\bin\Debug\net6.0-windows\Image\chamrong-profile.jpg");
+                string username = user._Username.ToString();
+                string lastName = user._LastName.ToString();
+                string firstName = user._FirstName.ToString();
+                string gender = user._Gender.ToString();
+                string role = user._Role.ToLower();
 
+                dgvUser.Rows.Add(picture, username, lastName, firstName, gender, role);
+            }
         }
     }
 }
