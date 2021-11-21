@@ -21,7 +21,7 @@ namespace PosSystem.Services.Implement
 
             try
             {
-                SqlCommand cmd = new SqlCommand(GenerateCommand.GetAll("[tblUsers]"), conn.connection);
+                SqlCommand cmd = new SqlCommand(GenerateCommand.GetAllWhereOneColumn("[tblUsers]", "[User_Status]", "1"), conn.connection);
                 SqlDataReader users = cmd.ExecuteReader();
 
                 while (users.Read())
