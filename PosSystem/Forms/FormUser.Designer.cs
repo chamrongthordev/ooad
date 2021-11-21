@@ -341,7 +341,7 @@
             this.btnSearch.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSearch.Location = new System.Drawing.Point(451, 46);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(94, 49);
+            this.btnSearch.Size = new System.Drawing.Size(110, 49);
             this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "ស្វែងរក";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -349,10 +349,10 @@
             // 
             // txtSearchBox
             // 
-            this.txtSearchBox.Font = new System.Drawing.Font("Battambang", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtSearchBox.Location = new System.Drawing.Point(302, 52);
+            this.txtSearchBox.Font = new System.Drawing.Font("Battambang", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtSearchBox.Location = new System.Drawing.Point(289, 46);
             this.txtSearchBox.Name = "txtSearchBox";
-            this.txtSearchBox.Size = new System.Drawing.Size(125, 35);
+            this.txtSearchBox.Size = new System.Drawing.Size(156, 44);
             this.txtSearchBox.TabIndex = 2;
             // 
             // comboSearchBy
@@ -364,15 +364,15 @@
             this.comboSearchBy.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboSearchBy.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboSearchBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboSearchBy.Font = new System.Drawing.Font("Battambang", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboSearchBy.Font = new System.Drawing.Font("Battambang", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.comboSearchBy.FormattingEnabled = true;
             this.comboSearchBy.Items.AddRange(new object[] {
             "គណនេយ្យ",
             "នា​​មត្រកូល",
             "នា​​ម​ខ្លួន"});
-            this.comboSearchBy.Location = new System.Drawing.Point(141, 54);
+            this.comboSearchBy.Location = new System.Drawing.Point(141, 49);
             this.comboSearchBy.Name = "comboSearchBy";
-            this.comboSearchBy.Size = new System.Drawing.Size(142, 32);
+            this.comboSearchBy.Size = new System.Drawing.Size(142, 39);
             this.comboSearchBy.TabIndex = 1;
             // 
             // lblSearchBy

@@ -61,6 +61,22 @@ namespace PosSystem.Forms
         private void FormUser_Load(object sender, EventArgs e)
         {
             comboSearchBy.SelectedIndex = 0;
+            _GetAllUsers();
+        }
+
+        private void panelSearchBy_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnSearch_MouseHover(object sender, EventArgs e)
+        {
+            btnSearch.Cursor = Cursors.Hand;
+        }
+
+        //Get all users
+        private void _GetAllUsers()
+        {
             List<User> users = _userService.UserRepository.GetUsers();
             foreach (User user in users)
             {
@@ -75,16 +91,6 @@ namespace PosSystem.Forms
 
                 dgvUser.Rows.Add(picture, username, lastName, firstName, gender, role, btnDelete, btnUpdate);
             }
-        }
-
-        private void panelSearchBy_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnSearch_MouseHover(object sender, EventArgs e)
-        {
-            btnSearch.Cursor = Cursors.Hand;
         }
     }
 }
