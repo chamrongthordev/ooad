@@ -53,5 +53,10 @@ namespace PosSystem.Forms
         {
             btnLoadStockForm.Cursor = Cursors.Hand;
         }
+
+        private void FormUser_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
