@@ -1,21 +1,17 @@
 ﻿using PosSystem.Models;
 using PosSystem.Services;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using PosSystem.Utils;
+using System.Globalization;
 
 namespace PosSystem.Forms
 {
     public partial class FormUser : Form
     {
         private UserService _userService;
+        private string saveDirectory = @"Image\";
+        string fileSavePath = @"Image\no-image.png";
         public FormUser()
         {
             InitializeComponent();
@@ -79,7 +75,15 @@ namespace PosSystem.Forms
             List<User> users = _userService.UserRepository.GetUsers();
             foreach (User user in users)
             {
-                Image picture = Image.FromFile(user._Image.ToString());
+                Image picture;
+                try
+                {
+                    picture = Image.FromFile(user._Image.ToString());
+                }
+                catch (Exception)
+                {
+                    picture = Image.FromFile(fileSavePath);
+                }
                 string username = user._Username.ToString();
                 string lastName = user._LastName.ToString();
                 string firstName = user._FirstName.ToString();
@@ -97,7 +101,16 @@ namespace PosSystem.Forms
             dgvUser.Rows.Clear();
             foreach (User user in users)
             {
-                Image picture = Image.FromFile(user._Image.ToString());
+                Image picture;
+                try
+                {
+                    picture = Image.FromFile(user._Image.ToString());
+                }
+                catch (Exception)
+                {
+                    picture = Image.FromFile(fileSavePath);
+                }
+
                 string username = user._Username.ToString();
                 string lastName = user._LastName.ToString();
                 string firstName = user._FirstName.ToString();
@@ -111,22 +124,6 @@ namespace PosSystem.Forms
         private void txtSearchBox_KeyUp(object sender, KeyEventArgs e)
         {
             _FilterUserLogins();
-        }
-
-        private void dgvUser_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if(e.ColumnIndex == 0)
-            {
-                OpenFileDialog openFileDialog = new OpenFileDialog();
-                openFileDialog.Filter = "Image File(*.jpg, *png) | *.png; *.jpg";
-                DialogResult result = openFileDialog.ShowDialog();
-                if(result == DialogResult.OK)
-                {
-                    Image image = Image.FromFile(openFileDialog.FileName);
-                    int row = e.RowIndex;
-                    dgvUser.Rows[row].Cells[0].Value = image;
-                }
-            }
         }
 
         private void btnAdd_MouseHover(object sender, EventArgs e)
@@ -178,14 +175,56 @@ namespace PosSystem.Forms
                 formMessageBoxInfo.ShowDialog();
             }
 
-            // validate username
-            List<User> users = _userService.UserRepository.FindUsername(txtUsername.Text);
-            if(users.Count > 0)
+            else
             {
-                formMessageBoxInfo.SetInfo("គណនេយ្យនេះត្រូវបា​នប្រើប្រា​ស់រួចហើយ", "danger");
-                formMessageBoxInfo.ShowDialog();
+                // validate username
+                List<User> users = _userService.UserRepository.FindUsername(txtUsername.Text);
+                if (users.Count > 0)
+                {
+                    formMessageBoxInfo.SetInfo("គណនេយ្យនេះត្រូវបា​នប្រើប្រា​ស់រួចហើយ", "danger");
+                    formMessageBoxInfo.ShowDialog();
+                }
+                else
+                {
+
+                    User user = new User();
+                    user._FirstName = txtFirstName.Text;
+                    user._LastName = txtLastName.Text;
+                    user._Username = txtUsername.Text;
+                    user._Password = Security.EncodePasswordToBase64(txtPassword.Text);
+                    user._Gender = comboGender.Text;
+                    user._Role = comboxRole.Text;
+                    user._Image = fileSavePath;
+
+                    _userService.UserRepository.Save(user);
+                    _GetAllUsers();
+                }
             }
 
+        }
+
+        private void pictureBoxProfile_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image File(*.jpg, *png) | *.png; *.jpg";
+            
+            if(openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                if (!Directory.Exists(saveDirectory))
+                {
+                    Directory.CreateDirectory(saveDirectory);
+                }
+
+                string prefix = new Random().Next(1, 1000).ToString() + DateTime.Now.ToString().Replace(" ", "-").Replace("/", "-").Replace(":", "-");
+                MessageBox.Show(prefix);
+                string fileName =   prefix + Path.GetFileName(openFileDialog.FileName);
+                fileSavePath = Path.Combine(saveDirectory, fileName);
+
+                File.Copy(openFileDialog.FileName, fileSavePath, true);
+
+                pictureBoxProfile.Image = Image.FromFile(fileSavePath);
+            }
+            
         }
     }
 }

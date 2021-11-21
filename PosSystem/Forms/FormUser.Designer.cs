@@ -43,6 +43,8 @@
             this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Role = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelManipulator = new System.Windows.Forms.Panel();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.lblPassword = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -75,8 +77,6 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.lblLogo = new System.Windows.Forms.Label();
             this.panelLeftSidebar = new System.Windows.Forms.Panel();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.lblPassword = new System.Windows.Forms.Label();
             this.panelChartTracking.SuspendLayout();
             this.panelDataManagement.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
@@ -168,7 +168,6 @@
             this.dgvUser.RowTemplate.Height = 29;
             this.dgvUser.Size = new System.Drawing.Size(371, 670);
             this.dgvUser.TabIndex = 10;
-            this.dgvUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_CellClick);
             // 
             // dgvImageUser
             // 
@@ -246,6 +245,26 @@
             this.panelManipulator.Size = new System.Drawing.Size(515, 670);
             this.panelManipulator.TabIndex = 0;
             // 
+            // txtPassword
+            // 
+            this.txtPassword.Font = new System.Drawing.Font("Battambang", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtPassword.Location = new System.Drawing.Point(105, 156);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(179, 38);
+            this.txtPassword.TabIndex = 15;
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Font = new System.Drawing.Font("Battambang", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblPassword.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblPassword.Location = new System.Drawing.Point(22, 158);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(83, 27);
+            this.lblPassword.TabIndex = 14;
+            this.lblPassword.Text = "លេខសម្ងា​ត់";
+            // 
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(114)))), ((int)(((byte)(215)))));
@@ -297,6 +316,7 @@
             this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxProfile.TabIndex = 10;
             this.pictureBoxProfile.TabStop = false;
+            this.pictureBoxProfile.Click += new System.EventHandler(this.pictureBoxProfile_Click);
             // 
             // lblGender
             // 
@@ -675,25 +695,6 @@
             this.panelLeftSidebar.Name = "panelLeftSidebar";
             this.panelLeftSidebar.Size = new System.Drawing.Size(426, 958);
             this.panelLeftSidebar.TabIndex = 3;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Font = new System.Drawing.Font("Battambang", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtPassword.Location = new System.Drawing.Point(105, 156);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(179, 38);
-            this.txtPassword.TabIndex = 15;
-            // 
-            // lblPassword
-            // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Battambang", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPassword.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblPassword.Location = new System.Drawing.Point(22, 158);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(83, 27);
-            this.lblPassword.TabIndex = 14;
-            this.lblPassword.Text = "លេខសម្ងា​ត់";
             // 
             // FormUser
             // 

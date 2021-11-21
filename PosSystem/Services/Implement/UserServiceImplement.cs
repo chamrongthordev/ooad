@@ -4,7 +4,6 @@ using PosSystem.Configs;
 using PosSystem.Utils;
 using PosSystem.Models;
 using System.Data.SqlClient;
-
 namespace PosSystem.Services.Implement
 {
     public class UserServiceImplement : IUserRepository
@@ -101,7 +100,10 @@ namespace PosSystem.Services.Implement
             try
             {
                 SqlCommand cmd = new SqlCommand(GenerateCommand.SaveUser("tblUsers", user._FirstName, user._LastName, user._Username, user._Password, user._Gender, user._Role, user._Image), conn.connection);
-                
+                cmd.ExecuteNonQuery();
+                FormMessageBoxInfo formMessageBoxInfo = new FormMessageBoxInfo();
+                formMessageBoxInfo.SetInfo("គណនេយ្យថ្មីត្រូវបា​នបញ្ចូល ដោ​យជោ​គជ័យ", "success");
+                formMessageBoxInfo.ShowDialog();
                 conn.connection.Close();
             }
             catch (Exception e)
@@ -162,7 +164,7 @@ namespace PosSystem.Services.Implement
 
             try
             {
-                SqlCommand cmd = new SqlCommand(GenerateCommand.GetAllWhereThreeColumn("[tblUsers]", "[User_Username]", username, "[User_Password]", password, "[User_Status]", "1"), conn.connection);
+                SqlCommand cmd = new SqlCommand(GenerateCommand.GetAllWhereThreeColumn("[tblUsers]", "[User_Username]", username, "[User_Password]", Security.EncodePasswordToBase64(password), "[User_Status]", "1"), conn.connection);
                 SqlDataReader users = cmd.ExecuteReader();
 
 

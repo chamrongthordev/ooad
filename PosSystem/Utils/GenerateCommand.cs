@@ -17,7 +17,7 @@ namespace PosSystem.Utils
         /// <returns>Sql Command</returns>
         public static string GetAllWhereOneColumn(string tableName, string columnName, string value )
         {
-            return $"SELECT * FROM {tableName} WHERE {columnName} = '{value}';";
+            return $"SELECT * FROM {tableName} WHERE {columnName} = N'{value}';";
         }
 
         /// <summary>
@@ -31,12 +31,12 @@ namespace PosSystem.Utils
         /// <returns>Sql Command</returns>
         public static string GetAllWhereTwoColumn(string tableName, string columnName1, string value1, string columnName2, string value2 )
         {
-            return $"SELECT * FROM {tableName} WHERE {columnName1} = '{value1}' AND {columnName2} = '{value2}';";
+            return $"SELECT * FROM {tableName} WHERE {columnName1} = N'{value1}' AND {columnName2} = N'{value2}';";
         }
 
         public static string FilterByTwoColumn(string tableName, string columnName1, string value1, string columnName2, string value2)
         {
-            return $"SELECT * FROM {tableName} WHERE {columnName1} LIKE '{value1}%' AND {columnName2} = '{value2}';";
+            return $"SELECT * FROM {tableName} WHERE {columnName1} LIKE N'{value1}%' AND {columnName2} = N'{value2}';";
         }
 
         /// <summary>
@@ -52,7 +52,7 @@ namespace PosSystem.Utils
         /// <returns></returns>
         public static string GetAllWhereThreeColumn(string tableName, string columnName1, string value1, string columnName2, string value2, string columnName3, string value3)
         {
-            return $"SELECT * FROM {tableName} WHERE {columnName1} = '{value1}' AND {columnName2} = '{value2}' AND {columnName3} = '{value3}';";
+            return $"SELECT * FROM {tableName} WHERE {columnName1} = N'{value1}' AND {columnName2} = N'{value2}' AND {columnName3} = N'{value3}';";
         }
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace PosSystem.Utils
 
         public static string SaveUser(string tableName, string firstName, string lastName, string username, string password, string gender, string role, string image)
         {
-            return $"INSERT INTO ([User_FirstName], [User_LastName], [User_Username], [User_Password], [User_Gender], [User_Role], [User_Image]) VALUES[{tableName}] ([{firstName}], [{lastName}], [{username}], [{password}], [{gender}], [{gender}], [{role}] [{image}])";
+            return $"INSERT INTO {tableName} (User_FirstName, User_LastName, User_Username, User_Password, User_Gender, User_Role, User_Image, User_Status) VALUES (N'{firstName}', N'{lastName}', N'{username}', N'{password}', N'{gender}', N'{role}', N'{image}', '1')";
         }
     }
 }

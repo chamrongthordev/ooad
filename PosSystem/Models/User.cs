@@ -8,7 +8,10 @@ namespace PosSystem.Models
 {
     public class User
     {
+        private string image1;
+
         public User() {}
+
         public User(int iD, string firstName, string lastName, string username, string password, string gender, string role, string image, bool status)
         {
             _ID = iD;
