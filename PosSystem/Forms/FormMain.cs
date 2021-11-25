@@ -49,5 +49,11 @@ namespace PosSystem.Forms
             Hide();
             new FormUser().Show();
         }
+
+        private void btnStock_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new FormStock().Show();
+        }
     }
 }

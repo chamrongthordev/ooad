@@ -303,7 +303,18 @@ namespace PosSystem.Forms
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnStock_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new FormStock().Show();
+        }
+
+        private void btnClear_MouseHover(object sender, EventArgs e)
+        {
+            btnClear.Cursor = Cursors.Hand;
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
         {
             txtUsername.Text = "";
             txtFirstName.Text = "";

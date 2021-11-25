@@ -126,6 +126,7 @@
             this.btnStock.TabIndex = 2;
             this.btnStock.Text = "ស្តុក";
             this.btnStock.UseVisualStyleBackColor = false;
+            this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
             this.btnStock.MouseHover += new System.EventHandler(this.btnStock_MouseHover);
             // 
             // btnDashboard
