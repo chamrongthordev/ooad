@@ -27,11 +27,6 @@ namespace PosSystem.Forms
             btnUser.Cursor = Cursors.Hand;
         }
 
-        private void btnReport_MouseHover(object sender, EventArgs e)
-        {
-            btnReport.Cursor = Cursors.Hand;
-        }
-
         private void btnLogout_MouseHover(object sender, EventArgs e)
         {
             btnLogout.Cursor = Cursors.Hand;

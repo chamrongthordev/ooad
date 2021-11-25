@@ -194,5 +194,25 @@ namespace PosSystem.Services.Implement
 
             return usersList.Count > 0;
         }
+
+        public void UpdateUser(User user)
+        {
+            conn.connection.Open();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand(GenerateCommand.SaveUser("tblUsers", user._FirstName, user._LastName, user._Username, user._Password, user._Gender, user._Role, user._Image), conn.connection);
+                cmd.ExecuteNonQuery();
+                FormMessageBoxInfo formMessageBoxInfo = new FormMessageBoxInfo();
+                formMessageBoxInfo.SetInfo("គណនេយ្យថ្មីត្រូវបា​នបញ្ចូល ដោ​យជោ​គជ័យ", "success");
+                formMessageBoxInfo.ShowDialog();
+                conn.connection.Close();
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show(e.ToString());
+            }
+        }
     }
 }

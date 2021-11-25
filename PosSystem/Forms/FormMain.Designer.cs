@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelLeftSidebar = new System.Windows.Forms.Panel();
-            this.btnReport = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
             this.btnSale = new System.Windows.Forms.Button();
             this.btnStock = new System.Windows.Forms.Button();
@@ -59,7 +58,6 @@
             // 
             this.panelLeftSidebar.BackColor = System.Drawing.Color.White;
             this.panelLeftSidebar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelLeftSidebar.Controls.Add(this.btnReport);
             this.panelLeftSidebar.Controls.Add(this.btnUser);
             this.panelLeftSidebar.Controls.Add(this.btnSale);
             this.panelLeftSidebar.Controls.Add(this.btnStock);
@@ -71,25 +69,6 @@
             this.panelLeftSidebar.Name = "panelLeftSidebar";
             this.panelLeftSidebar.Size = new System.Drawing.Size(426, 958);
             this.panelLeftSidebar.TabIndex = 0;
-            // 
-            // btnReport
-            // 
-            this.btnReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(187)))), ((int)(((byte)(105)))));
-            this.btnReport.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReport.Font = new System.Drawing.Font("Battambang", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnReport.ForeColor = System.Drawing.Color.White;
-            this.btnReport.Image = ((System.Drawing.Image)(resources.GetObject("btnReport.Image")));
-            this.btnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReport.Location = new System.Drawing.Point(0, 439);
-            this.btnReport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnReport.Size = new System.Drawing.Size(424, 76);
-            this.btnReport.TabIndex = 5;
-            this.btnReport.Text = "របា​យកា​រណ៍";
-            this.btnReport.UseVisualStyleBackColor = false;
-            this.btnReport.MouseHover += new System.EventHandler(this.btnReport_MouseHover);
             // 
             // btnUser
             // 
@@ -189,7 +168,7 @@
             this.lblLogo.Location = new System.Drawing.Point(52, 35);
             this.lblLogo.Name = "lblLogo";
             this.lblLogo.Padding = new System.Windows.Forms.Padding(5, 10, 5, 5);
-            this.lblLogo.Size = new System.Drawing.Size(293, 67);
+            this.lblLogo.Size = new System.Drawing.Size(331, 74);
             this.lblLogo.TabIndex = 0;
             this.lblLogo.Text = "ប្រព័ន្ធគ្រប់គ្រងកា​រលក់";
             this.lblLogo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -299,7 +278,7 @@
             this.lblMainTopTitle.Font = new System.Drawing.Font("Battambang", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblMainTopTitle.Location = new System.Drawing.Point(49, 40);
             this.lblMainTopTitle.Name = "lblMainTopTitle";
-            this.lblMainTopTitle.Size = new System.Drawing.Size(145, 68);
+            this.lblMainTopTitle.Size = new System.Drawing.Size(164, 77);
             this.lblMainTopTitle.TabIndex = 0;
             this.lblMainTopTitle.Text = "ទិន្នន័យ";
             // 
@@ -341,7 +320,6 @@
         private Button btnStock;
         private Button btnSale;
         private Button btnUser;
-        private Button btnReport;
         private Panel panelLogout;
         private Button btnLogout;
         private Panel panelMain;

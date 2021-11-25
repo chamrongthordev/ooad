@@ -96,7 +96,7 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPassword.Location = new System.Drawing.Point(191, 237);
+            this.txtPassword.Location = new System.Drawing.Point(206, 234);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(253, 44);
@@ -105,7 +105,7 @@
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtUsername.Location = new System.Drawing.Point(191, 192);
+            this.txtUsername.Location = new System.Drawing.Point(206, 189);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(253, 44);
             this.txtUsername.TabIndex = 2;
@@ -117,7 +117,7 @@
             this.lblPassword.ForeColor = System.Drawing.Color.White;
             this.lblPassword.Location = new System.Drawing.Point(45, 242);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(99, 31);
+            this.lblPassword.Size = new System.Drawing.Size(113, 36);
             this.lblPassword.TabIndex = 1;
             this.lblPassword.Text = "លេខសំងា​ត់";
             // 
@@ -128,9 +128,9 @@
             this.lblUsername.ForeColor = System.Drawing.Color.White;
             this.lblUsername.Location = new System.Drawing.Point(45, 197);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(92, 31);
+            this.lblUsername.Size = new System.Drawing.Size(155, 36);
             this.lblUsername.TabIndex = 0;
-            this.lblUsername.Text = "គណនេយ្យ";
+            this.lblUsername.Text = "ឈ្មោះគណនេយ្យ";
             // 
             // FormLogin
             // 

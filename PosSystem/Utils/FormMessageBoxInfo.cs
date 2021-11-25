@@ -15,7 +15,11 @@ namespace PosSystem.Utils
         public FormMessageBoxInfo()
         {
             InitializeComponent();
+            timerCounter.Stop();
             timerCounter.Start();
+            Rectangle workingArea = Screen.GetWorkingArea(this);
+            this.Location = new Point(workingArea.Right - Size.Width,
+                                      workingArea.Bottom - Size.Height);
         }
 
         private void btnClose_MouseHover(object sender, EventArgs e)
@@ -59,10 +63,6 @@ namespace PosSystem.Utils
 
         private void timerCounter_Tick(object sender, EventArgs e)
         {
-            Rectangle workingArea = Screen.GetWorkingArea(this);
-            this.Location = new Point(workingArea.Right - Size.Width,
-                                      workingArea.Bottom - Size.Height);
-
             timerCounter.Stop();
             Hide();
         }

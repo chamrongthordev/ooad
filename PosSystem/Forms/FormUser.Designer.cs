@@ -69,7 +69,6 @@
             this.txtSearchBox = new System.Windows.Forms.TextBox();
             this.comboSearchBy = new System.Windows.Forms.ComboBox();
             this.lblSearchBy = new System.Windows.Forms.Label();
-            this.btnReport = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
             this.btnSale = new System.Windows.Forms.Button();
             this.btnStock = new System.Windows.Forms.Button();
@@ -558,25 +557,6 @@
             this.lblSearchBy.TabIndex = 0;
             this.lblSearchBy.Text = "ស្វែងរកតា​មរយៈ";
             // 
-            // btnReport
-            // 
-            this.btnReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(187)))), ((int)(((byte)(105)))));
-            this.btnReport.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReport.Font = new System.Drawing.Font("Battambang", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnReport.ForeColor = System.Drawing.Color.White;
-            this.btnReport.Image = ((System.Drawing.Image)(resources.GetObject("btnReport.Image")));
-            this.btnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReport.Location = new System.Drawing.Point(0, 439);
-            this.btnReport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnReport.Size = new System.Drawing.Size(424, 76);
-            this.btnReport.TabIndex = 5;
-            this.btnReport.Text = "របា​យកា​រណ៍";
-            this.btnReport.UseVisualStyleBackColor = false;
-            this.btnReport.MouseHover += new System.EventHandler(this.btnReport_MouseHover);
-            // 
             // btnUser
             // 
             this.btnUser.BackColor = System.Drawing.Color.DarkGreen;
@@ -683,7 +663,6 @@
             // 
             this.panelLeftSidebar.BackColor = System.Drawing.Color.White;
             this.panelLeftSidebar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelLeftSidebar.Controls.Add(this.btnReport);
             this.panelLeftSidebar.Controls.Add(this.btnUser);
             this.panelLeftSidebar.Controls.Add(this.btnSale);
             this.panelLeftSidebar.Controls.Add(this.btnStock);
@@ -737,7 +716,6 @@
         private Button btnLogout;
         private Panel panelLogout;
         private Panel panelNavBar;
-        private Button btnReport;
         private Button btnUser;
         private Button btnSale;
         private Button btnStock;

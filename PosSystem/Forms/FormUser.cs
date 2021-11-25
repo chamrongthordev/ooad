@@ -12,6 +12,7 @@ namespace PosSystem.Forms
         private IUserService _userService;
         private string saveDirectory = @"Image\";
         string fileSavePath = @"Image\no-image.png";
+ 
         public FormUser()
         {
             InitializeComponent();
@@ -31,11 +32,6 @@ namespace PosSystem.Forms
         private void btnSale_MouseHover(object sender, EventArgs e)
         {
             btnSale.Cursor = Cursors.Hand;
-        }
-
-        private void btnReport_MouseHover(object sender, EventArgs e)
-        {
-            btnReport.Cursor = Cursors.Hand;
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -131,11 +127,6 @@ namespace PosSystem.Forms
             btnAdd.Cursor = Cursors.Hand;
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnUpdate_MouseHover(object sender, EventArgs e)
         {
             btnUpdate.Cursor = Cursors.Hand;
@@ -224,6 +215,22 @@ namespace PosSystem.Forms
                 pictureBoxProfile.Image = Image.FromFile(fileSavePath);
             }
             
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            FormMessageBoxInfo formMessageBoxInfo = new FormMessageBoxInfo();
+            if (txtUsername.Text == "")
+            {
+
+                formMessageBoxInfo.SetInfo("សូមជ្រើសរើសអ្នកប្រើប្រាស់ជាមុនសិននឹងធ្វើការកែប្រែ", "warning");
+                formMessageBoxInfo.ShowDialog();
+            }
+
+            else
+            {
+
+            }
         }
     }
 }

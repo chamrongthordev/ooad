@@ -69,5 +69,10 @@ namespace PosSystem.Utils
         {
             return $"INSERT INTO {tableName} (User_FirstName, User_LastName, User_Username, User_Password, User_Gender, User_Role, User_Image, User_Status) VALUES (N'{firstName}', N'{lastName}', N'{username}', N'{password}', N'{gender}', N'{role}', N'{image}', '1')";
         }
+
+        public static string updateUser(string tableName, string firstName, string lastName, string username, string password, string gender, string role, string image)
+        {
+            return $"INSERT INTO {tableName} (User_FirstName, User_LastName, User_Username, User_Password, User_Gender, User_Role, User_Image, User_Status) VALUES (N'{firstName}', N'{lastName}', N'{username}', N'{password}', N'{gender}', N'{role}', N'{image}', '1')";
+        }
     }
 }
