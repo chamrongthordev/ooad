@@ -241,5 +241,39 @@ namespace PosSystem.Forms
                 _GetAllUsers();
             }
         }
+
+        private void dgvUser_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtFirstName.Text = dgvUser.CurrentRow.Cells[3].Value.ToString();
+            txtLastName.Text = dgvUser.CurrentRow.Cells[2].Value.ToString();
+            txtUsername.Text = dgvUser.CurrentRow.Cells[1].Value.ToString();
+
+            if (dgvUser.CurrentRow.Cells[4].Value.ToString() == "ប្រុស")
+            {
+                comboGender.SelectedIndex = 0;
+            }
+
+            if(dgvUser.CurrentRow.Cells[4].Value.ToString() == "ស្រី")
+            {
+                comboGender.SelectedIndex = 1;
+            }
+
+            if(dgvUser.CurrentRow.Cells[5].Value.ToString() == "អ្នកគ្រប់គ្រង")
+            {
+                comboxRole.SelectedIndex = 0;
+            }
+
+            if (dgvUser.CurrentRow.Cells[5].Value.ToString() == "អ្នកគិតលុយ")
+            {
+                comboxRole.SelectedIndex = 1;
+            }
+
+            if (dgvUser.CurrentRow.Cells[5].Value.ToString() == "អ្នកបញ្ចូលទិន្នន័យ")
+            {
+                comboxRole.SelectedIndex = 2;
+            }
+
+            pictureBoxProfile.Image = (Bitmap)dgvUser.CurrentRow.Cells[0].Value;
+        }
     }
 }

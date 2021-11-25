@@ -165,8 +165,10 @@
             this.dgvUser.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvUser.RowHeadersWidth = 51;
             this.dgvUser.RowTemplate.Height = 29;
+            this.dgvUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUser.Size = new System.Drawing.Size(804, 670);
             this.dgvUser.TabIndex = 10;
+            this.dgvUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_CellClick);
             // 
             // dgvImageUser
             // 
