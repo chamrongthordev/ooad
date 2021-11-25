@@ -302,5 +302,14 @@ namespace PosSystem.Forms
 
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            txtUsername.Text = "";
+            txtFirstName.Text = "";
+            txtLastName.Text = "";
+            txtPassword.Text = "";
+            pictureBoxProfile.Image = Image.FromFile(fileSavePath);
+        }
     }
 }
