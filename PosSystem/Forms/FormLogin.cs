@@ -28,7 +28,7 @@ namespace PosSystem.Forms
         private void btnLogin_Click(object sender, EventArgs e)
         {
             
-            var userService = UserService.getInstance();
+            var userService = IUserService.getInstance();
             bool isValidCredencial = userService.UserRepository.ValidateLogin(txtUsername.Text.Trim(), txtPassword.Text.Trim());
 
             if (isValidCredencial)

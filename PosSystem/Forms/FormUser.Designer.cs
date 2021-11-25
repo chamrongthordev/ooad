@@ -97,7 +97,7 @@
             this.lblMainTopTitle.Font = new System.Drawing.Font("Battambang", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblMainTopTitle.Location = new System.Drawing.Point(49, 40);
             this.lblMainTopTitle.Name = "lblMainTopTitle";
-            this.lblMainTopTitle.Size = new System.Drawing.Size(225, 68);
+            this.lblMainTopTitle.Size = new System.Drawing.Size(253, 77);
             this.lblMainTopTitle.TabIndex = 0;
             this.lblMainTopTitle.Text = "អ្នកប្រើប្រា​ស់";
             // 
@@ -107,7 +107,7 @@
             this.panelChartTracking.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChartTracking.Location = new System.Drawing.Point(0, 152);
             this.panelChartTracking.Name = "panelChartTracking";
-            this.panelChartTracking.Size = new System.Drawing.Size(886, 670);
+            this.panelChartTracking.Size = new System.Drawing.Size(1319, 670);
             this.panelChartTracking.TabIndex = 1;
             // 
             // panelDataManagement
@@ -118,7 +118,7 @@
             this.panelDataManagement.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDataManagement.Location = new System.Drawing.Point(0, 0);
             this.panelDataManagement.Name = "panelDataManagement";
-            this.panelDataManagement.Size = new System.Drawing.Size(886, 670);
+            this.panelDataManagement.Size = new System.Drawing.Size(1319, 670);
             this.panelDataManagement.TabIndex = 0;
             // 
             // dgvUser
@@ -166,7 +166,7 @@
             this.dgvUser.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvUser.RowHeadersWidth = 51;
             this.dgvUser.RowTemplate.Height = 29;
-            this.dgvUser.Size = new System.Drawing.Size(371, 670);
+            this.dgvUser.Size = new System.Drawing.Size(804, 670);
             this.dgvUser.TabIndex = 10;
             // 
             // dgvImageUser
@@ -248,7 +248,7 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Battambang", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtPassword.Location = new System.Drawing.Point(105, 156);
+            this.txtPassword.Location = new System.Drawing.Point(181, 160);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(179, 38);
@@ -261,7 +261,7 @@
             this.lblPassword.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblPassword.Location = new System.Drawing.Point(22, 158);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(83, 27);
+            this.lblPassword.Size = new System.Drawing.Size(96, 31);
             this.lblPassword.TabIndex = 14;
             this.lblPassword.Text = "លេខសម្ងា​ត់";
             // 
@@ -310,7 +310,7 @@
             // pictureBoxProfile
             // 
             this.pictureBoxProfile.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxProfile.Image")));
-            this.pictureBoxProfile.Location = new System.Drawing.Point(105, 308);
+            this.pictureBoxProfile.Location = new System.Drawing.Point(181, 312);
             this.pictureBoxProfile.Name = "pictureBoxProfile";
             this.pictureBoxProfile.Size = new System.Drawing.Size(203, 125);
             this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -325,7 +325,7 @@
             this.lblGender.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblGender.Location = new System.Drawing.Point(22, 228);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(37, 27);
+            this.lblGender.Size = new System.Drawing.Size(44, 31);
             this.lblGender.TabIndex = 9;
             this.lblGender.Text = "ភេទ";
             // 
@@ -339,9 +339,9 @@
             this.comboGender.Items.AddRange(new object[] {
             "ប្រុស",
             "ស្រី"});
-            this.comboGender.Location = new System.Drawing.Point(105, 225);
+            this.comboGender.Location = new System.Drawing.Point(181, 229);
             this.comboGender.Name = "comboGender";
-            this.comboGender.Size = new System.Drawing.Size(203, 35);
+            this.comboGender.Size = new System.Drawing.Size(203, 39);
             this.comboGender.TabIndex = 8;
             // 
             // lblRole
@@ -351,7 +351,7 @@
             this.lblRole.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblRole.Location = new System.Drawing.Point(22, 270);
             this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(53, 27);
+            this.lblRole.Size = new System.Drawing.Size(62, 31);
             this.lblRole.TabIndex = 7;
             this.lblRole.Text = "តួរនា​ទី";
             // 
@@ -366,15 +366,15 @@
             "អ្នកគ្រប់គ្រង",
             "អ្នកគិតលុយ",
             "អ្នកបញ្ចូលទិន្នន័យ"});
-            this.comboxRole.Location = new System.Drawing.Point(105, 267);
+            this.comboxRole.Location = new System.Drawing.Point(181, 271);
             this.comboxRole.Name = "comboxRole";
-            this.comboxRole.Size = new System.Drawing.Size(203, 35);
+            this.comboxRole.Size = new System.Drawing.Size(203, 39);
             this.comboxRole.TabIndex = 6;
             // 
             // txtFirstName
             // 
             this.txtFirstName.Font = new System.Drawing.Font("Battambang", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtFirstName.Location = new System.Drawing.Point(105, 112);
+            this.txtFirstName.Location = new System.Drawing.Point(181, 116);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(179, 38);
             this.txtFirstName.TabIndex = 5;
@@ -382,7 +382,7 @@
             // txtLastName
             // 
             this.txtLastName.Font = new System.Drawing.Font("Battambang", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtLastName.Location = new System.Drawing.Point(105, 68);
+            this.txtLastName.Location = new System.Drawing.Point(181, 72);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(179, 38);
             this.txtLastName.TabIndex = 4;
@@ -390,7 +390,7 @@
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Battambang", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtUsername.Location = new System.Drawing.Point(105, 24);
+            this.txtUsername.Location = new System.Drawing.Point(181, 28);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(179, 38);
             this.txtUsername.TabIndex = 3;
@@ -402,7 +402,7 @@
             this.lblFirstName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblFirstName.Location = new System.Drawing.Point(22, 114);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(58, 27);
+            this.lblFirstName.Size = new System.Drawing.Size(68, 31);
             this.lblFirstName.TabIndex = 2;
             this.lblFirstName.Text = "នា​មខ្លួន";
             // 
@@ -413,7 +413,7 @@
             this.lblLastname.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblLastname.Location = new System.Drawing.Point(22, 72);
             this.lblLastname.Name = "lblLastname";
-            this.lblLastname.Size = new System.Drawing.Size(78, 27);
+            this.lblLastname.Size = new System.Drawing.Size(91, 31);
             this.lblLastname.TabIndex = 1;
             this.lblLastname.Text = "នា​មត្រកូល";
             // 
@@ -424,7 +424,7 @@
             this.lblUsername.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblUsername.Location = new System.Drawing.Point(22, 28);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(77, 27);
+            this.lblUsername.Size = new System.Drawing.Size(90, 31);
             this.lblUsername.TabIndex = 0;
             this.lblUsername.Text = "គណនេយ្យ";
             // 
@@ -435,7 +435,7 @@
             this.panelMainTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMainTitle.Location = new System.Drawing.Point(0, 0);
             this.panelMainTitle.Name = "panelMainTitle";
-            this.panelMainTitle.Size = new System.Drawing.Size(886, 152);
+            this.panelMainTitle.Size = new System.Drawing.Size(1319, 152);
             this.panelMainTitle.TabIndex = 0;
             // 
             // panelMain
@@ -447,7 +447,7 @@
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(426, 136);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(886, 822);
+            this.panelMain.Size = new System.Drawing.Size(1319, 822);
             this.panelMain.TabIndex = 5;
             // 
             // btnLogout
@@ -475,7 +475,7 @@
             this.panelLogout.BackColor = System.Drawing.Color.Transparent;
             this.panelLogout.Controls.Add(this.btnLogout);
             this.panelLogout.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelLogout.Location = new System.Drawing.Point(623, 0);
+            this.panelLogout.Location = new System.Drawing.Point(1056, 0);
             this.panelLogout.Name = "panelLogout";
             this.panelLogout.Padding = new System.Windows.Forms.Padding(5);
             this.panelLogout.Size = new System.Drawing.Size(261, 134);
@@ -491,7 +491,7 @@
             this.panelNavBar.Location = new System.Drawing.Point(426, 0);
             this.panelNavBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelNavBar.Name = "panelNavBar";
-            this.panelNavBar.Size = new System.Drawing.Size(886, 136);
+            this.panelNavBar.Size = new System.Drawing.Size(1319, 136);
             this.panelNavBar.TabIndex = 4;
             // 
             // panelSearchBy
@@ -503,7 +503,7 @@
             this.panelSearchBy.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSearchBy.Location = new System.Drawing.Point(0, 0);
             this.panelSearchBy.Name = "panelSearchBy";
-            this.panelSearchBy.Size = new System.Drawing.Size(623, 134);
+            this.panelSearchBy.Size = new System.Drawing.Size(1056, 134);
             this.panelSearchBy.TabIndex = 1;
             this.panelSearchBy.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSearchBy_Paint);
             // 
@@ -512,7 +512,7 @@
             this.btnSearch.BackColor = System.Drawing.Color.DimGray;
             this.btnSearch.Font = new System.Drawing.Font("Battambang", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSearch.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSearch.Location = new System.Drawing.Point(451, 46);
+            this.btnSearch.Location = new System.Drawing.Point(527, 41);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(110, 49);
             this.btnSearch.TabIndex = 3;
@@ -523,7 +523,7 @@
             // txtSearchBox
             // 
             this.txtSearchBox.Font = new System.Drawing.Font("Battambang", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtSearchBox.Location = new System.Drawing.Point(289, 46);
+            this.txtSearchBox.Location = new System.Drawing.Point(365, 44);
             this.txtSearchBox.Name = "txtSearchBox";
             this.txtSearchBox.Size = new System.Drawing.Size(156, 44);
             this.txtSearchBox.TabIndex = 2;
@@ -542,9 +542,9 @@
             this.comboSearchBy.FormattingEnabled = true;
             this.comboSearchBy.Items.AddRange(new object[] {
             "គណនេយ្យ"});
-            this.comboSearchBy.Location = new System.Drawing.Point(141, 49);
+            this.comboSearchBy.Location = new System.Drawing.Point(217, 47);
             this.comboSearchBy.Name = "comboSearchBy";
-            this.comboSearchBy.Size = new System.Drawing.Size(142, 39);
+            this.comboSearchBy.Size = new System.Drawing.Size(142, 44);
             this.comboSearchBy.TabIndex = 1;
             // 
             // lblSearchBy
@@ -554,7 +554,7 @@
             this.lblSearchBy.ForeColor = System.Drawing.Color.White;
             this.lblSearchBy.Location = new System.Drawing.Point(5, 55);
             this.lblSearchBy.Name = "lblSearchBy";
-            this.lblSearchBy.Size = new System.Drawing.Size(130, 31);
+            this.lblSearchBy.Size = new System.Drawing.Size(149, 36);
             this.lblSearchBy.TabIndex = 0;
             this.lblSearchBy.Text = "ស្វែងរកតា​មរយៈ";
             // 
@@ -674,7 +674,7 @@
             this.lblLogo.Location = new System.Drawing.Point(52, 35);
             this.lblLogo.Name = "lblLogo";
             this.lblLogo.Padding = new System.Windows.Forms.Padding(5, 10, 5, 5);
-            this.lblLogo.Size = new System.Drawing.Size(293, 67);
+            this.lblLogo.Size = new System.Drawing.Size(331, 74);
             this.lblLogo.TabIndex = 0;
             this.lblLogo.Text = "ប្រព័ន្ធគ្រប់គ្រងកា​រលក់";
             this.lblLogo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -701,7 +701,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.ClientSize = new System.Drawing.Size(1312, 958);
+            this.ClientSize = new System.Drawing.Size(1745, 958);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelNavBar);
             this.Controls.Add(this.panelLeftSidebar);

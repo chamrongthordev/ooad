@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "y1tf11qaPjXlCSDTfdwNYrCXOLQgsMAWgcuSqlim/YR39Mu6w64qx54vpm2FpziEOaC8VB/zGZS3zAMV4odanw==",
+  "dgSpecHash": "g0k1hLL4+ZLU+qTmV52N61n4WvFAcQ89T8lbJ601kI/QUXfatL23mB+y0dtlbo6vuoAGw8EvLrjKL61JiYXViA==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\ooad-rupp-assignment-pos-system\\PosSystem\\PosSystem.csproj",
+  "projectFilePath": "D:\\3- Projects\\1-Learn\\ooad-rupp-assignment-pos-system\\PosSystem\\PosSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\chamr\\.nuget\\packages\\linq2db\\3.6.0\\linq2db.3.6.0.nupkg.sha512",
     "C:\\Users\\chamr\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",

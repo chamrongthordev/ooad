@@ -51,7 +51,7 @@
             this.MessageBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MessageBox.Location = new System.Drawing.Point(0, 0);
             this.MessageBox.Name = "MessageBox";
-            this.MessageBox.Size = new System.Drawing.Size(569, 92);
+            this.MessageBox.Size = new System.Drawing.Size(955, 92);
             this.MessageBox.TabIndex = 0;
             // 
             // lblInfo
@@ -61,7 +61,7 @@
             this.lblInfo.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.lblInfo.Location = new System.Drawing.Point(146, 31);
             this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(69, 31);
+            this.lblInfo.Size = new System.Drawing.Size(78, 36);
             this.lblInfo.TabIndex = 2;
             this.lblInfo.Text = "ព័ត៌មា​ន";
             // 
@@ -69,7 +69,7 @@
             // 
             this.panelRight.Controls.Add(this.btnClose);
             this.panelRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelRight.Location = new System.Drawing.Point(439, 0);
+            this.panelRight.Location = new System.Drawing.Point(825, 0);
             this.panelRight.Name = "panelRight";
             this.panelRight.Size = new System.Drawing.Size(130, 92);
             this.panelRight.TabIndex = 1;
@@ -120,7 +120,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(569, 92);
+            this.ClientSize = new System.Drawing.Size(955, 92);
             this.ControlBox = false;
             this.Controls.Add(this.MessageBox);
             this.Font = new System.Drawing.Font("Battambang", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);

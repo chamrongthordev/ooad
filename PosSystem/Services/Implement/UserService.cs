@@ -6,7 +6,7 @@ using PosSystem.Models;
 using System.Data.SqlClient;
 namespace PosSystem.Services.Implement
 {
-    public class UserServiceImplement : IUserRepository
+    public class UserService : IUserRepository
     {
         private readonly DBConnection conn = DBConnection.GetInstance();
         /// <summary>

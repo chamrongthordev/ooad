@@ -9,13 +9,13 @@ namespace PosSystem.Forms
 {
     public partial class FormUser : Form
     {
-        private UserService _userService;
+        private IUserService _userService;
         private string saveDirectory = @"Image\";
         string fileSavePath = @"Image\no-image.png";
         public FormUser()
         {
             InitializeComponent();
-            _userService = UserService.getInstance();
+            _userService = IUserService.getInstance();
         }
 
         private void btnDashboard_MouseHover(object sender, EventArgs e)
@@ -216,7 +216,6 @@ namespace PosSystem.Forms
                 }
 
                 string prefix = new Random().Next(1, 1000).ToString() + DateTime.Now.ToString().Replace(" ", "-").Replace("/", "-").Replace(":", "-");
-                MessageBox.Show(prefix);
                 string fileName =   prefix + Path.GetFileName(openFileDialog.FileName);
                 fileSavePath = Path.Combine(saveDirectory, fileName);
 
