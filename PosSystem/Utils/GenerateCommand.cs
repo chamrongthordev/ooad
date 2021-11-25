@@ -72,7 +72,11 @@ namespace PosSystem.Utils
 
         public static string updateUser(string tableName, string firstName, string lastName, string username, string password, string gender, string role, string image)
         {
-            return $"INSERT INTO {tableName} (User_FirstName, User_LastName, User_Username, User_Password, User_Gender, User_Role, User_Image, User_Status) VALUES (N'{firstName}', N'{lastName}', N'{username}', N'{password}', N'{gender}', N'{role}', N'{image}', '1')";
+            if (password == "")
+            {
+                return $"UPDATE {tableName} SET User_FirstName = N'{firstName}', User_LastName = N'{lastName}', User_Gender = N'{gender}', User_Role = N'{role}', User_Image = '{image}' WHERE User_Username = '{username}'";
+            }
+            return $"UPDATE {tableName} SET User_FirstName = N'{firstName}', User_LastName = N'{lastName}', User_Password = '{password}', User_Gender = N'{gender}', User_Role = N'{role}', User_Image = '{image}' WHERE User_Username = '{username}'";
         }
     }
 }

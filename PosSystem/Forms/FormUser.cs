@@ -222,14 +222,23 @@ namespace PosSystem.Forms
             FormMessageBoxInfo formMessageBoxInfo = new FormMessageBoxInfo();
             if (txtUsername.Text == "")
             {
-
-                formMessageBoxInfo.SetInfo("សូមជ្រើសរើសអ្នកប្រើប្រាស់ជាមុនសិននឹងធ្វើការកែប្រែ", "warning");
+                formMessageBoxInfo.SetInfo("សូមជ្រើសរើសអ្នកប្រើប្រាស់ជាមុនសិន មុននឹងធ្វើការកែប្រែ", "warning");
                 formMessageBoxInfo.ShowDialog();
             }
 
             else
             {
+                User user = new User();
+                user._FirstName = txtFirstName.Text;
+                user._LastName = txtLastName.Text;
+                user._Username = txtUsername.Text;
+                user._Password = Security.EncodePasswordToBase64(txtPassword.Text);
+                user._Gender = comboGender.Text;
+                user._Role = comboxRole.Text;
+                user._Image = fileSavePath;
 
+                _userService.UserRepository.UpdateUser(user, user._Username);
+                _GetAllUsers();
             }
         }
     }
