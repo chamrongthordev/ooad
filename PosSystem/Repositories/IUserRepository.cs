@@ -11,6 +11,5 @@ namespace PosSystem.Repositories
     {
         bool ValidateLogin(string username, string password);
         List<User> FindUsername(string username);
-        void UpdateUser(User user, string username);
     }
 }

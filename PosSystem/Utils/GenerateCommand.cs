@@ -78,5 +78,10 @@ namespace PosSystem.Utils
             }
             return $"UPDATE {tableName} SET User_FirstName = N'{firstName}', User_LastName = N'{lastName}', User_Password = '{password}', User_Gender = N'{gender}', User_Role = N'{role}', User_Image = '{image}' WHERE User_Username = '{username}'";
         }
+
+        public static string deleteWhereOneColumn(string tableName, string column, string value)
+        {
+            return $"UPDATE {tableName} SET User_Status = '0' WHERE {column} = '{value}'";
+        }
     }
 }

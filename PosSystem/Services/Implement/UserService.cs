@@ -8,7 +8,7 @@ namespace PosSystem.Services.Implement
 {
     public class UserService : IUserRepository
     {
-        private readonly DBConnection conn = DBConnection.GetInstance();
+        private DBConnection conn = DBConnection.GetInstance();
         /// <summary>
         /// Get all users as DataTable type
         /// </summary>
@@ -229,7 +229,7 @@ namespace PosSystem.Services.Implement
                     _cmd.ExecuteNonQuery();
 
                     FormMessageBoxInfo formMessageBoxInfo = new FormMessageBoxInfo();
-                    formMessageBoxInfo.SetInfo("គណនេយ្យថ្មីត្រូវបា​នធ្វើបច្ចុប្យបន្ធភាពដោ​យជោ​គជ័យ", "success");
+                    formMessageBoxInfo.SetInfo("គណនេយ្យត្រូវបា​នធ្វើបច្ចុប្យបន្ធភាពដោ​យជោ​គជ័យ", "success");
                     formMessageBoxInfo.ShowDialog();
                 }
 
@@ -237,10 +237,65 @@ namespace PosSystem.Services.Implement
                 {
 
                     FormMessageBoxInfo formMessageBoxInfo = new FormMessageBoxInfo();
-                    formMessageBoxInfo.SetInfo("ឈ្មោះគណនេយ្យមិនត្រឹមត្រូវ", "warnning");
+                    formMessageBoxInfo.SetInfo("ចូរបំពេញឈ្មោះគណនេយ្យឲ្យបានត្រឹមត្រូវ!", "warnning");
                     formMessageBoxInfo.ShowDialog();
                 }
                 
+                conn.connection.Close();
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show(e.ToString());
+            }
+        }
+
+        public void DeleteUser(string username)
+        {
+            conn.connection.Open();
+            List<User> usersList = new List<User>();
+
+            try
+            {
+                SqlCommand _cmd = new SqlCommand(GenerateCommand.GetAllWhereOneColumn("[tblUsers]", "[User_Username]", username), conn.connection);
+                SqlDataReader users = _cmd.ExecuteReader();
+
+
+                while (users.Read())
+                {
+                    int id = int.Parse(users[0].ToString());
+                    string userFirstName = users[1].ToString();
+                    string userLastName = users[2].ToString();
+                    string userUsername = users[3].ToString();
+                    string userPassword = users[4].ToString();
+                    string userGender = users[5].ToString();
+                    string userRole = users[6].ToString();
+                    string userImage = users[7].ToString();
+                    bool userStatus = bool.Parse(users[8].ToString());
+
+                    User _user = new User(id, userFirstName, userLastName, userUsername, userPassword, userGender, userRole, userImage, userStatus);
+                    usersList.Add(_user);
+                }
+                users.Close();
+
+                if (usersList.Count > 0)
+                {
+                    SqlCommand cmd = new SqlCommand(GenerateCommand.deleteWhereOneColumn("tblUsers", "User_Username", username), conn.connection);
+                    cmd.ExecuteNonQuery();
+
+                    FormMessageBoxInfo formMessageBoxInfo = new FormMessageBoxInfo();
+                    formMessageBoxInfo.SetInfo("គណនេយ្យនេះត្រូវបាន ដោយជោ​គជ័យ", "success");
+                    formMessageBoxInfo.ShowDialog();
+                }
+
+                else
+                {
+
+                    FormMessageBoxInfo formMessageBoxInfo = new FormMessageBoxInfo();
+                    formMessageBoxInfo.SetInfo("ចូរបំពេញឈ្មោះគណនេយ្យឲ្យបានត្រឹមត្រូវ!", "warnning");
+                    formMessageBoxInfo.ShowDialog();
+                }
+
                 conn.connection.Close();
             }
             catch (Exception e)

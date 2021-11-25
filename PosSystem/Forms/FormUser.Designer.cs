@@ -306,6 +306,7 @@
             this.btnDelete.TabIndex = 11;
             this.btnDelete.Text = "លុប";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             this.btnDelete.MouseHover += new System.EventHandler(this.btnDelete_MouseHover);
             // 
             // pictureBoxProfile
@@ -425,9 +426,9 @@
             this.lblUsername.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblUsername.Location = new System.Drawing.Point(22, 28);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(90, 31);
+            this.lblUsername.Size = new System.Drawing.Size(133, 31);
             this.lblUsername.TabIndex = 0;
-            this.lblUsername.Text = "គណនេយ្យ";
+            this.lblUsername.Text = "ឈ្មោះគណនេយ្យ";
             // 
             // panelMainTitle
             // 

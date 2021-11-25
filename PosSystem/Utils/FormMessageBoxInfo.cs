@@ -29,11 +29,6 @@ namespace PosSystem.Utils
 
         public void SetInfo(string messageBox, string status)
         {
-            timerCounter.Start();
-            Rectangle workingArea = Screen.GetWorkingArea(this);
-            this.Location = new Point(workingArea.Right - Size.Width,
-                                      workingArea.Bottom - Size.Height);
-
             lblInfo.Text = messageBox;
             switch (status)
             {
@@ -65,6 +60,14 @@ namespace PosSystem.Utils
         {
             timerCounter.Stop();
             Hide();
+        }
+
+        private void FormMessageBoxInfo_Load(object sender, EventArgs e)
+        {
+            timerCounter.Start();
+            Rectangle workingArea = Screen.GetWorkingArea(this);
+            this.Location = new Point(workingArea.Right - Size.Width,
+                                      workingArea.Bottom - Size.Height);
         }
     }
 }

@@ -127,6 +127,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormMessageBoxInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.FormMessageBoxInfo_Load);
             this.MessageBox.ResumeLayout(false);
             this.MessageBox.PerformLayout();
             this.panelRight.ResumeLayout(false);

@@ -275,5 +275,32 @@ namespace PosSystem.Forms
 
             pictureBoxProfile.Image = (Bitmap)dgvUser.CurrentRow.Cells[0].Value;
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            FormMessageBoxInfo formMessageBoxInfo = new FormMessageBoxInfo();
+            if (txtUsername.Text == "")
+            {
+                formMessageBoxInfo.SetInfo("សូមជ្រើសរើសអ្នកប្រើប្រាស់ជាមុនសិន មុននឹងធ្វើការលុប", "warning");
+                formMessageBoxInfo.ShowDialog();
+            }
+
+            else
+            {
+                FormMessageBoxConfirm formMessageBoxConfirm = new FormMessageBoxConfirm();
+                formMessageBoxConfirm.ShowDialog();
+                if(formMessageBoxConfirm.GetIsDeleted() == true)
+                {
+                    _userService.UserRepository.DeleteUser(txtUsername.Text);
+                    _GetAllUsers();
+                }
+
+                else
+                {
+                    formMessageBoxConfirm.Hide();
+                }
+
+            }
+        }
     }
 }
