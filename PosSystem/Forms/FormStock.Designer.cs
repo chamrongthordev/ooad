@@ -40,7 +40,7 @@
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelChartTracking = new System.Windows.Forms.Panel();
             this.panelDataManagement = new System.Windows.Forms.Panel();
-            this.dgvUser = new System.Windows.Forms.DataGridView();
+            this.dgvStock = new System.Windows.Forms.DataGridView();
             this.dgvImageProduct = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgvProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvProductBarcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,7 +78,7 @@
             this.panelMain.SuspendLayout();
             this.panelChartTracking.SuspendLayout();
             this.panelDataManagement.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).BeginInit();
             this.panelManipulator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.panelNavBar.SuspendLayout();
@@ -162,7 +162,7 @@
             // panelDataManagement
             // 
             this.panelDataManagement.BackColor = System.Drawing.Color.Silver;
-            this.panelDataManagement.Controls.Add(this.dgvUser);
+            this.panelDataManagement.Controls.Add(this.dgvStock);
             this.panelDataManagement.Controls.Add(this.panelManipulator);
             this.panelDataManagement.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDataManagement.Location = new System.Drawing.Point(0, 0);
@@ -170,11 +170,11 @@
             this.panelDataManagement.Size = new System.Drawing.Size(1319, 670);
             this.panelDataManagement.TabIndex = 0;
             // 
-            // dgvUser
+            // dgvStock
             // 
-            this.dgvUser.AllowUserToAddRows = false;
-            this.dgvUser.AllowUserToDeleteRows = false;
-            this.dgvUser.BackgroundColor = System.Drawing.SystemColors.GrayText;
+            this.dgvStock.AllowUserToAddRows = false;
+            this.dgvStock.AllowUserToDeleteRows = false;
+            this.dgvStock.BackgroundColor = System.Drawing.SystemColors.GrayText;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Battambang", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -182,9 +182,9 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvStock.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvImageProduct,
             this.dgvProductName,
             this.dgvProductBarcode,
@@ -197,13 +197,13 @@
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvUser.DefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvUser.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dgvUser.Location = new System.Drawing.Point(515, 0);
-            this.dgvUser.Name = "dgvUser";
-            this.dgvUser.ReadOnly = true;
-            this.dgvUser.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvStock.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvStock.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvStock.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvStock.Location = new System.Drawing.Point(515, 0);
+            this.dgvStock.Name = "dgvStock";
+            this.dgvStock.ReadOnly = true;
+            this.dgvStock.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Battambang", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -211,12 +211,12 @@
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUser.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvUser.RowHeadersWidth = 51;
-            this.dgvUser.RowTemplate.Height = 29;
-            this.dgvUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUser.Size = new System.Drawing.Size(804, 670);
-            this.dgvUser.TabIndex = 10;
+            this.dgvStock.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvStock.RowHeadersWidth = 51;
+            this.dgvStock.RowTemplate.Height = 29;
+            this.dgvStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvStock.Size = new System.Drawing.Size(804, 670);
+            this.dgvStock.TabIndex = 10;
             // 
             // dgvImageProduct
             // 
@@ -304,7 +304,6 @@
             this.txtProductQuantity.Font = new System.Drawing.Font("Battambang", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtProductQuantity.Location = new System.Drawing.Point(181, 160);
             this.txtProductQuantity.Name = "txtProductQuantity";
-            this.txtProductQuantity.PasswordChar = '*';
             this.txtProductQuantity.Size = new System.Drawing.Size(179, 38);
             this.txtProductQuantity.TabIndex = 15;
             // 
@@ -331,6 +330,7 @@
             this.btnAdd.TabIndex = 13;
             this.btnAdd.Text = "បញ្ចូល";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             this.btnAdd.MouseHover += new System.EventHandler(this.btnAdd_MouseHover);
             // 
             // btnUpdate
@@ -368,6 +368,7 @@
             this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxProfile.TabIndex = 10;
             this.pictureBoxProfile.TabStop = false;
+            this.pictureBoxProfile.Click += new System.EventHandler(this.pictureBoxProfile_Click);
             // 
             // txtProductPrice
             // 
@@ -456,7 +457,7 @@
             this.btnSearch.BackColor = System.Drawing.Color.DimGray;
             this.btnSearch.Font = new System.Drawing.Font("Battambang", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSearch.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSearch.Location = new System.Drawing.Point(527, 41);
+            this.btnSearch.Location = new System.Drawing.Point(851, 44);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(110, 49);
             this.btnSearch.TabIndex = 3;
@@ -467,10 +468,11 @@
             // txtSearchBox
             // 
             this.txtSearchBox.Font = new System.Drawing.Font("Battambang", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtSearchBox.Location = new System.Drawing.Point(365, 44);
+            this.txtSearchBox.Location = new System.Drawing.Point(514, 47);
             this.txtSearchBox.Name = "txtSearchBox";
-            this.txtSearchBox.Size = new System.Drawing.Size(156, 44);
+            this.txtSearchBox.Size = new System.Drawing.Size(312, 44);
             this.txtSearchBox.TabIndex = 2;
+            this.txtSearchBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearchBox_KeyUp);
             // 
             // comboSearchBy
             // 
@@ -488,7 +490,7 @@
             "Barcode"});
             this.comboSearchBy.Location = new System.Drawing.Point(217, 47);
             this.comboSearchBy.Name = "comboSearchBy";
-            this.comboSearchBy.Size = new System.Drawing.Size(142, 44);
+            this.comboSearchBy.Size = new System.Drawing.Size(261, 44);
             this.comboSearchBy.TabIndex = 1;
             // 
             // lblSearchBy
@@ -634,13 +636,14 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormStock";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FormStock_Load);
             this.panelMainTitle.ResumeLayout(false);
             this.panelMainTitle.PerformLayout();
             this.panelLogout.ResumeLayout(false);
             this.panelMain.ResumeLayout(false);
             this.panelChartTracking.ResumeLayout(false);
             this.panelDataManagement.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).EndInit();
             this.panelManipulator.ResumeLayout(false);
             this.panelManipulator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
@@ -663,7 +666,7 @@
         private Panel panelMain;
         private Panel panelChartTracking;
         private Panel panelDataManagement;
-        private DataGridView dgvUser;
+        private DataGridView dgvStock;
         private Panel panelManipulator;
         private Button btnClear;
         private TextBox txtProductQuantity;

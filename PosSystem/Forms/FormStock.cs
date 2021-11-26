@@ -7,15 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PosSystem.Utils;
+using PosSystem.Models;
+using PosSystem.Services;
 
 namespace PosSystem.Forms
 {
     public partial class FormStock : Form
     {
+        private IProductService productService = IProductService.getInstance();
+        private string saveDirectory = @"Image\product\";
         string fileSavePath = @"Image\no-image.png";
         public FormStock()
         {
             InitializeComponent();
+
         }
 
         private void btnDashboard_MouseHover(object sender, EventArgs e)
@@ -93,6 +99,131 @@ namespace PosSystem.Forms
             txtProductPrice.Text = "";
             txtProductQuantity.Text = "";
             pictureBoxProfile.Image = Image.FromFile(fileSavePath);
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            FormMessageBoxInfo formMessageBoxInfo = new FormMessageBoxInfo();
+
+            if (txtProductName.Text == "")
+            {
+                formMessageBoxInfo.SetInfo("សូមបញ្ចូល ឈ្មោះផលិតផល", "warning");
+                formMessageBoxInfo.ShowDialog();
+            }
+
+            else if (txtProductBarcode.Text == "")
+            {
+                formMessageBoxInfo.SetInfo("សូមបញ្ចូលលេខ barcode", "warning");
+                formMessageBoxInfo.ShowDialog();
+            }
+
+            else if (txtProductPrice.Text == "")
+            {
+                formMessageBoxInfo.SetInfo("សូមបញ្ចូលលេខ តម្លៃផលិតផល", "warning");
+                formMessageBoxInfo.ShowDialog();
+            }
+
+            else if (txtProductQuantity.Text == "")
+            {
+                formMessageBoxInfo.SetInfo("សូមបញ្ចូលលេខ ចំនួនផលិតផល", "warning");
+                formMessageBoxInfo.ShowDialog();
+            }
+        }
+        private void pictureBoxProfile_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image File(*.jpg, *png) | *.png; *.jpg";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                if (!Directory.Exists(saveDirectory))
+                {
+                    Directory.CreateDirectory(saveDirectory);
+                }
+
+                string prefix = new Random().Next(1, 1000).ToString() + DateTime.Now.ToString().Replace(" ", "-").Replace("/", "-").Replace(":", "-");
+                string fileName = prefix + Path.GetFileName(openFileDialog.FileName);
+                fileSavePath = Path.Combine(saveDirectory, fileName);
+
+                File.Copy(openFileDialog.FileName, fileSavePath, true);
+
+                pictureBoxProfile.Image = Image.FromFile(fileSavePath);
+            }
+        }
+
+        private void FormStock_Load(object sender, EventArgs e)
+        {
+            comboSearchBy.SelectedIndex = 0;
+            _GetAllProducts();
+        }
+
+        // Get all users
+        private void _GetAllProducts()
+        {
+            dgvStock.Rows.Clear();
+            List<Product> products= productService.productRepository.GetAll();
+            foreach (Product product in products)
+            {
+                Image picture;
+                try
+                {
+                    picture = Image.FromFile(product._ProductImage);
+                }
+                catch (Exception)
+                {
+                    picture = Image.FromFile(fileSavePath);
+                }
+
+                string productName = product._ProductName;
+                int productBarcode = product._ProductBarcode;
+                decimal productPrice = product._ProductPrice;
+                int productQuantity = product._ProductQuantity;
+
+
+                dgvStock.Rows.Add(picture, productName, productBarcode, productPrice, productQuantity);
+            }
+        }
+
+        private void txtSearchBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            _FilterProduct();
+        }
+
+        private void _FilterProduct()
+        {
+            string columnName = "[Product_Name]";
+            if(comboSearchBy.SelectedIndex == 0)
+            {
+                columnName = "[Product_Name]";
+            }
+
+            if(comboSearchBy.SelectedIndex == 1)
+            {
+                columnName = "[Product_Barcode]";
+            }
+
+
+            List<Product> products = productService.productRepository.FilterBy(columnName, txtSearchBox.Text);
+            dgvStock.Rows.Clear();
+            foreach (Product product in products)
+            {
+                Image picture;
+                try
+                {
+                    picture = Image.FromFile(product._ProductImage);
+                }
+                catch (Exception)
+                {
+                    picture = Image.FromFile(fileSavePath);
+                }
+
+                dgvStock.Rows.Add(picture, product._ProductName, product._ProductBarcode, product._ProductPrice, product._ProductQuantity);
+            }
+        }
+
+        private void txtSearchBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            _FilterProduct();
         }
     }
 }

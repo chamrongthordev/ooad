@@ -68,7 +68,7 @@ namespace PosSystem.Forms
         private void _GetAllUsers()
         {
             dgvUser.Rows.Clear();
-            List<User> users = _userService.UserRepository.GetUsers();
+            List<User> users = _userService.UserRepository.GetAll();
             foreach (User user in users)
             {
                 Image picture;
@@ -93,7 +93,7 @@ namespace PosSystem.Forms
         // filter by Users
         private void _FilterUserLogins()
         {
-            List<User> users = _userService.UserRepository.FilterUsers("[User_Username]", txtSearchBox.Text);
+            List<User> users = _userService.UserRepository.FilterBy("[User_Username]", txtSearchBox.Text);
             dgvUser.Rows.Clear();
             foreach (User user in users)
             {
@@ -237,7 +237,7 @@ namespace PosSystem.Forms
                 user._Role = comboxRole.Text;
                 user._Image = fileSavePath;
 
-                _userService.UserRepository.UpdateUser(user, user._Username);
+                _userService.UserRepository.UpdateBy(user, user._Username);
                 _GetAllUsers();
             }
         }
@@ -291,7 +291,7 @@ namespace PosSystem.Forms
                 formMessageBoxConfirm.ShowDialog();
                 if(formMessageBoxConfirm.GetIsDeleted() == true)
                 {
-                    _userService.UserRepository.DeleteUser(txtUsername.Text);
+                    _userService.UserRepository.DeleteBy(txtUsername.Text);
                     _GetAllUsers();
                 }
 

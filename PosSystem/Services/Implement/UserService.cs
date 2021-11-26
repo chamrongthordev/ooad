@@ -13,7 +13,7 @@ namespace PosSystem.Services.Implement
         /// Get all users as DataTable type
         /// </summary>
         /// <returns></returns>
-        public List<User> GetUsers()
+        public List<User> GetAll()
         {
             conn.connection.Open();
             List<User> usersList = new List<User>();
@@ -56,7 +56,7 @@ namespace PosSystem.Services.Implement
         /// <param name="column"></param>
         /// <param name="value"></param>
         /// <returns></returns>
-        public List<User> FilterUsers(string column, string value)
+        public List<User> FilterBy(string column, string value)
         {
             conn.connection.Open();
             List<User> usersList = new List<User>();
@@ -195,7 +195,7 @@ namespace PosSystem.Services.Implement
             return usersList.Count > 0;
         }
 
-        public void UpdateUser(User user, string username)
+        public void UpdateBy(User user, string username)
         {
             conn.connection.Open();
             List<User> usersList = new List<User>();
@@ -250,7 +250,7 @@ namespace PosSystem.Services.Implement
             }
         }
 
-        public void DeleteUser(string username)
+        public void DeleteBy(string username)
         {
             conn.connection.Open();
             List<User> usersList = new List<User>();

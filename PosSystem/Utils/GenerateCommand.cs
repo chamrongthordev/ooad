@@ -39,6 +39,11 @@ namespace PosSystem.Utils
             return $"SELECT * FROM {tableName} WHERE {columnName1} LIKE N'{value1}%' AND {columnName2} = N'{value2}';";
         }
 
+        public static string FilterByOneColumn(string tableName, string columnName, string value)
+        {
+            return $"SELECT * FROM {tableName} WHERE {columnName} LIKE N'{value}%';";
+        }
+
         /// <summary>
         /// 
         /// </summary>
