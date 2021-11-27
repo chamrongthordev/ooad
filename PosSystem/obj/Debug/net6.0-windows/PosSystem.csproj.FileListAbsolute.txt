@@ -58,3 +58,4 @@ D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.
 D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.genruntimeconfig.cache
 D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.Utils.FormMessageBoxConfirm.resources
 D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.Forms.FormStock.resources
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.Forms.FormSale.resources

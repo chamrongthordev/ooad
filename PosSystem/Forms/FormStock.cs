@@ -47,7 +47,8 @@ namespace PosSystem.Forms
 
         private void btnSale_Click(object sender, EventArgs e)
         {
-
+            Hide();
+            new FormSale().Show();
         }
 
         private void btnUser_Click(object sender, EventArgs e)

@@ -116,6 +116,7 @@
             this.btnSale.TabIndex = 3;
             this.btnSale.Text = " កា​រលក់";
             this.btnSale.UseVisualStyleBackColor = false;
+            this.btnSale.Click += new System.EventHandler(this.btnSale_Click);
             this.btnSale.MouseHover += new System.EventHandler(this.btnSale_MouseHover);
             // 
             // btnStock
@@ -348,6 +349,7 @@
             this.btnLoadStockForm.TabIndex = 2;
             this.btnLoadStockForm.Text = "ពិនិត្យមើលផលិតផលក្នុងស្តុក";
             this.btnLoadStockForm.UseVisualStyleBackColor = false;
+            this.btnLoadStockForm.Click += new System.EventHandler(this.btnLoadStockForm_Click);
             this.btnLoadStockForm.MouseHover += new System.EventHandler(this.btnLoadStockForm_MouseHover);
             // 
             // lblMainTopTitle
