@@ -66,5 +66,15 @@ namespace PosSystem.Forms
             Hide();
             new FormSale().Show();
         }
+
+        private void FormSale_Load(object sender, EventArgs e)
+        {
+            comboSearchBy.SelectedIndex = 0;
+        }
+
+        private void btnCheckout_MouseHover(object sender, EventArgs e)
+        {
+            btnCheckout.Cursor = Cursors.Hand;
+        }
     }
 }
