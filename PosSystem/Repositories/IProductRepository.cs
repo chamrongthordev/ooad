@@ -10,5 +10,6 @@ namespace PosSystem.Repositories
     public interface IProductRepository: ICrud<Product>
     {
         bool FindByBarcode(string barcode);
+        int CountProduct();
     }
 }

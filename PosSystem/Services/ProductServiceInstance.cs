@@ -8,24 +8,24 @@ using PosSystem.Services.Implement;
 
 namespace PosSystem.Services
 {
-    public class IProductService
+    public class ProductServiceInstance
     {
-        private static IProductService? _productService;
-        public IProductRepository productRepository =  new ProductService();
+        private static ProductServiceInstance? _productService;
+        public IProductRepository ProductRepository =  new ProductService();
 
         // defind singleton pattern
-        private IProductService(){}
+        private ProductServiceInstance(){}
 
         /// <summary>
         /// Get an instance object of UserService
         /// </summary>
         /// <returns></returns>
-        public static IProductService getInstance()
+        public static ProductServiceInstance getInstance()
         {
 
             if (_productService == null)
             {
-                _productService = new IProductService();
+                _productService = new ProductServiceInstance();
             }
 
             return _productService;

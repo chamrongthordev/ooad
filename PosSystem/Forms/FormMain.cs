@@ -1,7 +1,12 @@
+using PosSystem.Services;
+
 namespace PosSystem.Forms
 {
     public partial class FormMain : Form
     {
+        UserServiceInstance _userService = UserServiceInstance.getInstance();
+        ProductServiceInstance _productService = ProductServiceInstance.getInstance();
+        
         public FormMain()
         {
             InitializeComponent();
@@ -10,6 +15,9 @@ namespace PosSystem.Forms
         private void FormMain_Load(object sender, EventArgs e)
         {
             btnDashboard.BackColor = Color.DarkGreen;
+            lblAmountProduct.Text = _productService.ProductRepository.CountProduct().ToString();
+            lblAmountUser.Text = _userService.UserRepository.CountUser().ToString();
+
         }
 
         private void btnStock_MouseHover(object sender, EventArgs e)

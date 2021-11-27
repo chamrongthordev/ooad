@@ -9,14 +9,14 @@ namespace PosSystem.Forms
 {
     public partial class FormUser : Form
     {
-        private IUserService _userService;
+        private UserServiceInstance _userService;
         private string saveDirectory = @"Image\";
         string fileSavePath = @"Image\no-image.png";
  
         public FormUser()
         {
             InitializeComponent();
-            _userService = IUserService.getInstance();
+            _userService = UserServiceInstance.getInstance();
         }
 
         private void btnDashboard_MouseHover(object sender, EventArgs e)

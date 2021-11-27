@@ -15,7 +15,7 @@ namespace PosSystem.Forms
 {
     public partial class FormStock : Form
     {
-        private IProductService productService = IProductService.getInstance();
+        private ProductServiceInstance productService = ProductServiceInstance.getInstance();
         private string saveDirectory = @"Image\product\";
         string fileSavePath = @"Image\no-image.png";
         public FormStock()
@@ -131,7 +131,7 @@ namespace PosSystem.Forms
 
             else
             {
-                if (productService.productRepository.FindByBarcode(txtProductBarcode.Text) == false)
+                if (productService.ProductRepository.FindByBarcode(txtProductBarcode.Text) == false)
                 {
                     FormMessageBoxInfo _formMessageBoxInfo = new FormMessageBoxInfo();
                     _formMessageBoxInfo.SetInfo("លេខ barcode ត្រូវបានប្រើប្រាស់រួចរាល់ហើយ", "warning");
@@ -146,7 +146,7 @@ namespace PosSystem.Forms
                     product._ProductPrice = decimal.Parse(txtProductPrice.Text);
                     product._ProductQuantity = int.Parse(txtProductQuantity.Text);
                     product._ProductImage = fileSavePath;
-                    productService.productRepository.Save(product);
+                    productService.ProductRepository.Save(product);
                     FormMessageBoxInfo _formMessageBoxInfo = new FormMessageBoxInfo();
                     _formMessageBoxInfo.SetInfo("ទិន្នន័យនេះត្រូវបានបញ្ចូលដោយជោគជ័យ", "success");
                     _formMessageBoxInfo.ShowDialog();
@@ -186,7 +186,7 @@ namespace PosSystem.Forms
         private void _GetAllProducts()
         {
             dgvStock.Rows.Clear();
-            List<Product> products= productService.productRepository.GetAll();
+            List<Product> products= productService.ProductRepository.GetAll();
             foreach (Product product in products)
             {
                 Image picture;
@@ -228,7 +228,7 @@ namespace PosSystem.Forms
             }
 
 
-            List<Product> products = productService.productRepository.FilterBy(columnName, txtSearchBox.Text);
+            List<Product> products = productService.ProductRepository.FilterBy(columnName, txtSearchBox.Text);
             dgvStock.Rows.Clear();
             foreach (Product product in products)
             {
@@ -272,7 +272,7 @@ namespace PosSystem.Forms
 
             else
             {
-                if (productService.productRepository.FindByBarcode(txtProductBarcode.Text) == true)
+                if (productService.ProductRepository.FindByBarcode(txtProductBarcode.Text) == true)
                 {
                     FormMessageBoxInfo _formMessageBoxInfo = new FormMessageBoxInfo();
                     _formMessageBoxInfo.SetInfo("សូមបំពេញលេខ barcode ឲ្យបានត្រឹមត្រូវ", "warning");
@@ -287,7 +287,7 @@ namespace PosSystem.Forms
                     product._ProductPrice = decimal.Parse(txtProductPrice.Text);
                     product._ProductQuantity = int.Parse(txtProductQuantity.Text);
                     product._ProductImage = fileSavePath;
-                    productService.productRepository.UpdateBy(product, txtProductBarcode.Text);
+                    productService.ProductRepository.UpdateBy(product, txtProductBarcode.Text);
                     FormMessageBoxInfo _formMessageBoxInfo = new FormMessageBoxInfo();
                     _formMessageBoxInfo.SetInfo("ទិន្នន័យនេះត្រូវបានកែប្រែដោយជោគជ័យ", "success");
                     _formMessageBoxInfo.ShowDialog();
@@ -307,7 +307,7 @@ namespace PosSystem.Forms
 
             else
             {
-                if (productService.productRepository.FindByBarcode(txtProductBarcode.Text) == true)
+                if (productService.ProductRepository.FindByBarcode(txtProductBarcode.Text) == true)
                 {
                     FormMessageBoxInfo _formMessageBoxInfo = new FormMessageBoxInfo();
                     _formMessageBoxInfo.SetInfo("សូមជ្រើសរើសទិន្នន័យជាមុនសិនមុននឹងប្រតិបត្តិការណ៍លុប", "warning");
@@ -320,7 +320,7 @@ namespace PosSystem.Forms
                     formMessageBoxConfirm.ShowDialog();
                     if (formMessageBoxConfirm.GetIsDeleted() == true)
                     {
-                        productService.productRepository.DeleteBy(txtProductBarcode.Text);
+                        productService.ProductRepository.DeleteBy(txtProductBarcode.Text);
                         FormMessageBoxInfo _formMessageBoxInfo = new FormMessageBoxInfo();
                         _formMessageBoxInfo.SetInfo("លោកអ្នកបានប្រតិបត្តិការណ៍លុបដោយជោគជ័យ", "warning");
                         _formMessageBoxInfo.ShowDialog();

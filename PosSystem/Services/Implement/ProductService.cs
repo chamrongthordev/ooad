@@ -171,5 +171,39 @@ namespace PosSystem.Services.Implement
                 MessageBox.Show(e.ToString());
             }
         }
+
+        public int CountProduct()
+        {
+            conn.connection.Open();
+            List<Product> productLists = new List<Product>();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand($"SELECT * FROM tblProducts;", conn.connection);
+                SqlDataReader products = cmd.ExecuteReader();
+
+                while (products.Read())
+                {
+                    int id = int.Parse(products[0].ToString());
+                    string productName = products[1].ToString();
+                    int productBarcode = int.Parse(products[2].ToString());
+                    decimal productPrice = decimal.Parse(products[3].ToString());
+                    int productQuantity = int.Parse(products[4].ToString());
+                    string productImage = products[5].ToString();
+
+                    Product product = new Product(id, productName, productBarcode, productPrice, productQuantity, productImage);
+                    productLists.Add(product);
+                }
+                products.Close();
+                conn.connection.Close();
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show(e.ToString());
+            }
+
+            return productLists.Count;
+        }
     }
 }

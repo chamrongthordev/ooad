@@ -42,15 +42,15 @@
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelChartTracking = new System.Windows.Forms.Panel();
             this.panelCountStock = new System.Windows.Forms.Panel();
+            this.lblAmountProduct = new System.Windows.Forms.Label();
             this.lblCountProduct = new System.Windows.Forms.Label();
             this.panelCountUser = new System.Windows.Forms.Panel();
+            this.lblAmountUser = new System.Windows.Forms.Label();
             this.lblCountUser = new System.Windows.Forms.Label();
             this.panelMainTitle = new System.Windows.Forms.Panel();
             this.PanelBtnLoadStockFormWrapper = new System.Windows.Forms.Panel();
             this.btnLoadStockForm = new System.Windows.Forms.Button();
             this.lblMainTopTitle = new System.Windows.Forms.Label();
-            this.lblAmountProduct = new System.Windows.Forms.Label();
-            this.lblProductAmount = new System.Windows.Forms.Label();
             this.panelLeftSidebar.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelNavBar.SuspendLayout();
@@ -251,12 +251,24 @@
             // panelCountStock
             // 
             this.panelCountStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.panelCountStock.Controls.Add(this.lblProductAmount);
+            this.panelCountStock.Controls.Add(this.lblAmountProduct);
             this.panelCountStock.Controls.Add(this.lblCountProduct);
             this.panelCountStock.Location = new System.Drawing.Point(439, 50);
             this.panelCountStock.Name = "panelCountStock";
             this.panelCountStock.Size = new System.Drawing.Size(346, 232);
             this.panelCountStock.TabIndex = 1;
+            // 
+            // lblAmountProduct
+            // 
+            this.lblAmountProduct.AutoSize = true;
+            this.lblAmountProduct.Font = new System.Drawing.Font("Cambria", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAmountProduct.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblAmountProduct.Location = new System.Drawing.Point(135, 109);
+            this.lblAmountProduct.Name = "lblAmountProduct";
+            this.lblAmountProduct.Size = new System.Drawing.Size(77, 38);
+            this.lblAmountProduct.TabIndex = 2;
+            this.lblAmountProduct.Text = "321";
+            this.lblAmountProduct.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblCountProduct
             // 
@@ -272,12 +284,24 @@
             // panelCountUser
             // 
             this.panelCountUser.BackColor = System.Drawing.Color.Maroon;
-            this.panelCountUser.Controls.Add(this.lblAmountProduct);
+            this.panelCountUser.Controls.Add(this.lblAmountUser);
             this.panelCountUser.Controls.Add(this.lblCountUser);
             this.panelCountUser.Location = new System.Drawing.Point(70, 50);
             this.panelCountUser.Name = "panelCountUser";
             this.panelCountUser.Size = new System.Drawing.Size(346, 232);
             this.panelCountUser.TabIndex = 0;
+            // 
+            // lblAmountUser
+            // 
+            this.lblAmountUser.AutoSize = true;
+            this.lblAmountUser.Font = new System.Drawing.Font("Cambria", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAmountUser.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblAmountUser.Location = new System.Drawing.Point(143, 109);
+            this.lblAmountUser.Name = "lblAmountUser";
+            this.lblAmountUser.Size = new System.Drawing.Size(57, 38);
+            this.lblAmountUser.TabIndex = 1;
+            this.lblAmountUser.Text = "50";
+            this.lblAmountUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblCountUser
             // 
@@ -336,28 +360,6 @@
             this.lblMainTopTitle.TabIndex = 0;
             this.lblMainTopTitle.Text = "ទិន្នន័យ";
             // 
-            // lblAmountProduct
-            // 
-            this.lblAmountProduct.AutoSize = true;
-            this.lblAmountProduct.Font = new System.Drawing.Font("Cambria", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblAmountProduct.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblAmountProduct.Location = new System.Drawing.Point(143, 109);
-            this.lblAmountProduct.Name = "lblAmountProduct";
-            this.lblAmountProduct.Size = new System.Drawing.Size(57, 40);
-            this.lblAmountProduct.TabIndex = 1;
-            this.lblAmountProduct.Text = "50";
-            // 
-            // lblProductAmount
-            // 
-            this.lblProductAmount.AutoSize = true;
-            this.lblProductAmount.Font = new System.Drawing.Font("Cambria", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblProductAmount.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblProductAmount.Location = new System.Drawing.Point(135, 109);
-            this.lblProductAmount.Name = "lblProductAmount";
-            this.lblProductAmount.Size = new System.Drawing.Size(77, 40);
-            this.lblProductAmount.TabIndex = 2;
-            this.lblProductAmount.Text = "321";
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 24F);
@@ -413,7 +415,7 @@
         private Panel panelCountUser;
         private Label lblCountUser;
         private Label lblCountProduct;
+        private Label lblAmountUser;
         private Label lblAmountProduct;
-        private Label lblProductAmount;
     }
 }
