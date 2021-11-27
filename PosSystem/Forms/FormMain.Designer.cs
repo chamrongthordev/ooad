@@ -41,15 +41,24 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelChartTracking = new System.Windows.Forms.Panel();
+            this.panelCountStock = new System.Windows.Forms.Panel();
+            this.lblCountProduct = new System.Windows.Forms.Label();
+            this.panelCountUser = new System.Windows.Forms.Panel();
+            this.lblCountUser = new System.Windows.Forms.Label();
             this.panelMainTitle = new System.Windows.Forms.Panel();
             this.PanelBtnLoadStockFormWrapper = new System.Windows.Forms.Panel();
             this.btnLoadStockForm = new System.Windows.Forms.Button();
             this.lblMainTopTitle = new System.Windows.Forms.Label();
+            this.lblAmountProduct = new System.Windows.Forms.Label();
+            this.lblProductAmount = new System.Windows.Forms.Label();
             this.panelLeftSidebar.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelNavBar.SuspendLayout();
             this.panelLogout.SuspendLayout();
             this.panelMain.SuspendLayout();
+            this.panelChartTracking.SuspendLayout();
+            this.panelCountStock.SuspendLayout();
+            this.panelCountUser.SuspendLayout();
             this.panelMainTitle.SuspendLayout();
             this.PanelBtnLoadStockFormWrapper.SuspendLayout();
             this.SuspendLayout();
@@ -231,11 +240,55 @@
             // 
             // panelChartTracking
             // 
+            this.panelChartTracking.Controls.Add(this.panelCountStock);
+            this.panelChartTracking.Controls.Add(this.panelCountUser);
             this.panelChartTracking.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChartTracking.Location = new System.Drawing.Point(0, 152);
             this.panelChartTracking.Name = "panelChartTracking";
             this.panelChartTracking.Size = new System.Drawing.Size(886, 670);
             this.panelChartTracking.TabIndex = 1;
+            // 
+            // panelCountStock
+            // 
+            this.panelCountStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panelCountStock.Controls.Add(this.lblProductAmount);
+            this.panelCountStock.Controls.Add(this.lblCountProduct);
+            this.panelCountStock.Location = new System.Drawing.Point(439, 50);
+            this.panelCountStock.Name = "panelCountStock";
+            this.panelCountStock.Size = new System.Drawing.Size(346, 232);
+            this.panelCountStock.TabIndex = 1;
+            // 
+            // lblCountProduct
+            // 
+            this.lblCountProduct.AutoSize = true;
+            this.lblCountProduct.Font = new System.Drawing.Font("Khmer OS Battambang", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblCountProduct.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblCountProduct.Location = new System.Drawing.Point(43, 26);
+            this.lblCountProduct.Name = "lblCountProduct";
+            this.lblCountProduct.Size = new System.Drawing.Size(266, 41);
+            this.lblCountProduct.TabIndex = 1;
+            this.lblCountProduct.Text = "ចំនួនផលិតផលនៅក្នុងស្តុក";
+            // 
+            // panelCountUser
+            // 
+            this.panelCountUser.BackColor = System.Drawing.Color.Maroon;
+            this.panelCountUser.Controls.Add(this.lblAmountProduct);
+            this.panelCountUser.Controls.Add(this.lblCountUser);
+            this.panelCountUser.Location = new System.Drawing.Point(70, 50);
+            this.panelCountUser.Name = "panelCountUser";
+            this.panelCountUser.Size = new System.Drawing.Size(346, 232);
+            this.panelCountUser.TabIndex = 0;
+            // 
+            // lblCountUser
+            // 
+            this.lblCountUser.AutoSize = true;
+            this.lblCountUser.Font = new System.Drawing.Font("Khmer OS Battambang", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblCountUser.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblCountUser.Location = new System.Drawing.Point(60, 26);
+            this.lblCountUser.Name = "lblCountUser";
+            this.lblCountUser.Size = new System.Drawing.Size(234, 41);
+            this.lblCountUser.TabIndex = 0;
+            this.lblCountUser.Text = "ចំនួនអ្នកប្រើប្រាស់សរុប";
             // 
             // panelMainTitle
             // 
@@ -283,6 +336,28 @@
             this.lblMainTopTitle.TabIndex = 0;
             this.lblMainTopTitle.Text = "ទិន្នន័យ";
             // 
+            // lblAmountProduct
+            // 
+            this.lblAmountProduct.AutoSize = true;
+            this.lblAmountProduct.Font = new System.Drawing.Font("Cambria", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAmountProduct.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblAmountProduct.Location = new System.Drawing.Point(143, 109);
+            this.lblAmountProduct.Name = "lblAmountProduct";
+            this.lblAmountProduct.Size = new System.Drawing.Size(57, 40);
+            this.lblAmountProduct.TabIndex = 1;
+            this.lblAmountProduct.Text = "50";
+            // 
+            // lblProductAmount
+            // 
+            this.lblProductAmount.AutoSize = true;
+            this.lblProductAmount.Font = new System.Drawing.Font("Cambria", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblProductAmount.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblProductAmount.Location = new System.Drawing.Point(135, 109);
+            this.lblProductAmount.Name = "lblProductAmount";
+            this.lblProductAmount.Size = new System.Drawing.Size(77, 40);
+            this.lblProductAmount.TabIndex = 2;
+            this.lblProductAmount.Text = "321";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 24F);
@@ -304,6 +379,11 @@
             this.panelNavBar.ResumeLayout(false);
             this.panelLogout.ResumeLayout(false);
             this.panelMain.ResumeLayout(false);
+            this.panelChartTracking.ResumeLayout(false);
+            this.panelCountStock.ResumeLayout(false);
+            this.panelCountStock.PerformLayout();
+            this.panelCountUser.ResumeLayout(false);
+            this.panelCountUser.PerformLayout();
             this.panelMainTitle.ResumeLayout(false);
             this.panelMainTitle.PerformLayout();
             this.PanelBtnLoadStockFormWrapper.ResumeLayout(false);
@@ -329,5 +409,11 @@
         private Panel PanelBtnLoadStockFormWrapper;
         private Button btnLoadStockForm;
         private Panel panelChartTracking;
+        private Panel panelCountStock;
+        private Panel panelCountUser;
+        private Label lblCountUser;
+        private Label lblCountProduct;
+        private Label lblAmountProduct;
+        private Label lblProductAmount;
     }
 }
