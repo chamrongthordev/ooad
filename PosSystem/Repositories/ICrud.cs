@@ -10,6 +10,11 @@ namespace PosSystem.Repositories
 {
     public interface ICrud<T> where T : class
     {
-        public List<T> GetUsers();
+        public List<T> GetAll();
+        public List<T> FilterBy(string column, string value);
+        public void Save(T TObject);
+        void UpdateBy(T t, string columnName);
+
+        void DeleteBy(string columnName);
     }
 }

@@ -25,3 +25,37 @@ D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\bin\Debug\net6.0-windows\run
 D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.csproj.CopyComplete
+D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.Forms.FormUser.resources
+D:\GitHub\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.Utils.FormMessageBoxInfo.resources
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\bin\Debug\net6.0-windows\PosSystem.exe
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\bin\Debug\net6.0-windows\PosSystem.deps.json
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\bin\Debug\net6.0-windows\PosSystem.runtimeconfig.json
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\bin\Debug\net6.0-windows\PosSystem.dll
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\bin\Debug\net6.0-windows\ref\PosSystem.dll
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\bin\Debug\net6.0-windows\PosSystem.pdb
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\bin\Debug\net6.0-windows\linq2db.dll
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.csproj.AssemblyReference.cache
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.Forms.FormLogin.resources
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.Forms.FormMain.resources
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.Forms.FormUser.resources
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.Properties.Resources.resources
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.Utils.FormMessageBoxInfo.resources
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.csproj.GenerateResource.cache
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.GeneratedMSBuildEditorConfig.editorconfig
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.AssemblyInfoInputs.cache
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.AssemblyInfo.cs
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.csproj.CoreCompileInputs.cache
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.csproj.CopyComplete
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.dll
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\ref\PosSystem.dll
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.pdb
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.genruntimeconfig.cache
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.Utils.FormMessageBoxConfirm.resources
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.Forms.FormStock.resources
+D:\3- Projects\1-Learn\ooad-rupp-assignment-pos-system\PosSystem\obj\Debug\net6.0-windows\PosSystem.Forms.FormSale.resources

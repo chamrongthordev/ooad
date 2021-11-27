@@ -3,24 +3,24 @@ using PosSystem.Services.Implement;
 
 namespace PosSystem.Services
 {
-    public class UserService
+    public class UserServiceInstance
     {
-        private static UserService? _userService;
-        public IUserRepository UserRepository =  new UserServiceImplement();
+        private static UserServiceInstance? _userService;
+        public IUserRepository UserRepository =  new UserService();
 
         // defind singleton pattern
-        private UserService(){}
+        private UserServiceInstance(){}
 
         /// <summary>
         /// Get an instance object of UserService
         /// </summary>
         /// <returns></returns>
-        public static UserService getInstance()
+        public static UserServiceInstance getInstance()
         {
 
             if (_userService == null)
             {
-                _userService = new UserService();
+                _userService = new UserServiceInstance();
             }
 
             return _userService;

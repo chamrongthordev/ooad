@@ -10,5 +10,8 @@ namespace PosSystem.Repositories
     public interface IUserRepository:ICrud<User>
     {
         bool ValidateLogin(string username, string password);
+        List<User> FindUsername(string username);
+
+        int CountUser();
     }
 }
