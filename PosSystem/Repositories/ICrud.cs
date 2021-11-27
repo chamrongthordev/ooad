@@ -13,8 +13,8 @@ namespace PosSystem.Repositories
         public List<T> GetAll();
         public List<T> FilterBy(string column, string value);
         public void Save(T TObject);
-        void UpdateBy(User user, string username);
+        void UpdateBy(T t, string columnName);
 
-        void DeleteBy(string username);
+        void DeleteBy(string columnName);
     }
 }

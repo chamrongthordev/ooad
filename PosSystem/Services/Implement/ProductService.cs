@@ -15,9 +15,21 @@ namespace PosSystem.Services.Implement
     {
         private DBConnection conn = DBConnection.GetInstance();
 
-        public void DeleteBy(string username)
+        public void DeleteBy(string barcode)
         {
-            throw new NotImplementedException();
+            conn.connection.Open();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand($"DELETE FROM tblProducts WHERE Product_Barcode = {barcode}", conn.connection);
+                SqlDataReader products = cmd.ExecuteReader();
+                conn.connection.Close();
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show(e.ToString());
+            }
         }
 
         public List<Product> FilterBy(string column, string value)
@@ -105,11 +117,6 @@ namespace PosSystem.Services.Implement
             }
         }
 
-        public void UpdateBy(User user, string username)
-        {
-            throw new NotImplementedException();
-        }
-
         public bool FindByBarcode(string barcode)
         {
             conn.connection.Open();
@@ -146,6 +153,23 @@ namespace PosSystem.Services.Implement
                 return false;
             }
             return true;
+        }
+
+        public void UpdateBy(Product product, string columnName)
+        {
+            conn.connection.Open();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand(GenerateCommand.UpdateProduct("tblProducts", product._ProductName, product._ProductBarcode, product._ProductPrice, product._ProductQuantity, product._ProductImage), conn.connection);
+                SqlDataReader products = cmd.ExecuteReader();
+                conn.connection.Close();
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show(e.ToString());
+            }
         }
     }
 }

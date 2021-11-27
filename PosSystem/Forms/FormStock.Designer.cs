@@ -345,6 +345,7 @@
             this.btnUpdate.TabIndex = 12;
             this.btnUpdate.Text = "កែប្រែ";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             this.btnUpdate.MouseHover += new System.EventHandler(this.btnUpdate_MouseHover);
             // 
             // btnDelete
@@ -358,6 +359,7 @@
             this.btnDelete.TabIndex = 11;
             this.btnDelete.Text = "លុប";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             this.btnDelete.MouseHover += new System.EventHandler(this.btnDelete_MouseHover);
             // 
             // pictureBoxProfile

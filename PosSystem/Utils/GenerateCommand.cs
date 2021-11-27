@@ -93,5 +93,10 @@ namespace PosSystem.Utils
         {
             return $"INSERT INTO {tableName} (Product_Name, Product_Barcode, Product_Price, Product_Qty, Product_Image) VALUES (N'{productName}', '{productBarcode}', '{productPrice}', '{productQuantity}',N'{imagePath}')";
         }
+
+        public static string UpdateProduct(string tableName, string productName, int productBarcode, decimal productPrice, int productQuantity, string imagePath)
+        {
+            return $"UPDATE {tableName} SET Product_Name = N'{productName}', Product_Price = '{productPrice}', Product_Qty = '{productQuantity}', Product_Image = N'{imagePath}' WHERE Product_Barcode = {productBarcode};";
+        }
     }
 }

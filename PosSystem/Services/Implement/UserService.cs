@@ -284,7 +284,7 @@ namespace PosSystem.Services.Implement
                     cmd.ExecuteNonQuery();
 
                     FormMessageBoxInfo formMessageBoxInfo = new FormMessageBoxInfo();
-                    formMessageBoxInfo.SetInfo("គណនេយ្យនេះត្រូវបាន ដោយជោ​គជ័យ", "success");
+                    formMessageBoxInfo.SetInfo("គណនេយ្យនេះត្រូវបានលុប ដោយជោ​គជ័យ", "success");
                     formMessageBoxInfo.ShowDialog();
                 }
 

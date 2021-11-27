@@ -98,7 +98,7 @@ namespace PosSystem.Forms
             txtProductBarcode.Text = "";
             txtProductPrice.Text = "";
             txtProductQuantity.Text = "";
-            pictureBoxProfile.Image = Image.FromFile(fileSavePath);
+            pictureBoxProfile.Image = Image.FromFile(@"Image\no-image.png");
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -259,6 +259,80 @@ namespace PosSystem.Forms
             txtProductQuantity.Text = dgvStock.CurrentRow.Cells[4].Value.ToString();
 
             pictureBoxProfile.Image = (Bitmap)dgvStock.CurrentRow.Cells[0].Value;
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if(txtProductBarcode.Text == "")
+            {
+                FormMessageBoxInfo formMessageBoxInfo = new FormMessageBoxInfo();
+                formMessageBoxInfo.SetInfo("សូមជ្រើសរើសទិន្នន័យសម្រាប់ធ្វើការកែប្រែជាមុនសិន", "warning");
+                formMessageBoxInfo.ShowDialog();
+            }
+
+            else
+            {
+                if (productService.productRepository.FindByBarcode(txtProductBarcode.Text) == true)
+                {
+                    FormMessageBoxInfo _formMessageBoxInfo = new FormMessageBoxInfo();
+                    _formMessageBoxInfo.SetInfo("សូមបំពេញលេខ barcode ឲ្យបានត្រឹមត្រូវ", "warning");
+                    _formMessageBoxInfo.ShowDialog();
+                }
+
+                else
+                {
+                    Product product = new Product();
+                    product._ProductName = txtProductName.Text;
+                    product._ProductBarcode = int.Parse(txtProductBarcode.Text);
+                    product._ProductPrice = decimal.Parse(txtProductPrice.Text);
+                    product._ProductQuantity = int.Parse(txtProductQuantity.Text);
+                    product._ProductImage = fileSavePath;
+                    productService.productRepository.UpdateBy(product, txtProductBarcode.Text);
+                    FormMessageBoxInfo _formMessageBoxInfo = new FormMessageBoxInfo();
+                    _formMessageBoxInfo.SetInfo("ទិន្នន័យនេះត្រូវបានកែប្រែដោយជោគជ័យ", "success");
+                    _formMessageBoxInfo.ShowDialog();
+                    _GetAllProducts();
+                }
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (txtProductBarcode.Text == "")
+            {
+                FormMessageBoxInfo formMessageBoxInfo = new FormMessageBoxInfo();
+                formMessageBoxInfo.SetInfo("សូមជ្រើសរើសទិន្នន័យជាមុនសិន ទើបអ្នកអាចលុបទិន្នន័យបាន", "warning");
+                formMessageBoxInfo.ShowDialog();
+            }
+
+            else
+            {
+                if (productService.productRepository.FindByBarcode(txtProductBarcode.Text) == true)
+                {
+                    FormMessageBoxInfo _formMessageBoxInfo = new FormMessageBoxInfo();
+                    _formMessageBoxInfo.SetInfo("សូមជ្រើសរើសទិន្នន័យជាមុនសិនមុននឹងប្រតិបត្តិការណ៍លុប", "warning");
+                    _formMessageBoxInfo.ShowDialog();
+                }
+
+                else
+                {
+                    FormMessageBoxConfirm formMessageBoxConfirm = new FormMessageBoxConfirm();
+                    formMessageBoxConfirm.ShowDialog();
+                    if (formMessageBoxConfirm.GetIsDeleted() == true)
+                    {
+                        productService.productRepository.DeleteBy(txtProductBarcode.Text);
+                        FormMessageBoxInfo _formMessageBoxInfo = new FormMessageBoxInfo();
+                        _formMessageBoxInfo.SetInfo("លោកអ្នកបានប្រតិបត្តិការណ៍លុបដោយជោគជ័យ", "warning");
+                        _formMessageBoxInfo.ShowDialog();
+                        _GetAllProducts();
+                    }
+
+                    else
+                    {
+                        formMessageBoxConfirm.Hide();
+                    }
+                }
+            }
         }
     }
 }
