@@ -21,5 +21,44 @@ namespace PosSystem.Forms
         {
             btnLogout.Cursor = Cursors.Hand;
         }
+
+        private void btnDashboard_MouseHover(object sender, EventArgs e)
+        {
+            btnDashboard.Cursor = Cursors.Hand;
+        }
+
+        private void btnStock_MouseHover(object sender, EventArgs e)
+        {
+            btnStock.Cursor = Cursors.Hand;
+        }
+
+        private void btnUser_MouseHover(object sender, EventArgs e)
+        {
+            btnUser.Cursor = Cursors.Hand;
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new FormMain().Show();
+        }
+
+        private void btnStock_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new FormStock().Show();
+        }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new FormUser().Show();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new FormLogin();
+        }
     }
 }

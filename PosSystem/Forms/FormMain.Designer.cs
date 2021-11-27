@@ -116,7 +116,6 @@
             this.btnSale.TabIndex = 3;
             this.btnSale.Text = " កា​រលក់";
             this.btnSale.UseVisualStyleBackColor = false;
-            this.btnSale.Click += new System.EventHandler(this.btnSale_Click);
             this.btnSale.MouseHover += new System.EventHandler(this.btnSale_MouseHover);
             // 
             // btnStock

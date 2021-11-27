@@ -213,6 +213,7 @@
             this.btnLogout.TabIndex = 0;
             this.btnLogout.Text = "ចា​កចេញ";
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             this.btnLogout.MouseHover += new System.EventHandler(this.btnLogout_MouseHover);
             // 
             // panelLogout
@@ -269,6 +270,8 @@
             this.btnUser.TabIndex = 4;
             this.btnUser.Text = "អ្នកប្រើប្រា​ស់";
             this.btnUser.UseVisualStyleBackColor = false;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
+            this.btnUser.MouseHover += new System.EventHandler(this.btnUser_MouseHover);
             // 
             // btnSale
             // 
@@ -305,6 +308,8 @@
             this.btnStock.TabIndex = 2;
             this.btnStock.Text = "ស្តុក";
             this.btnStock.UseVisualStyleBackColor = false;
+            this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
+            this.btnStock.MouseHover += new System.EventHandler(this.btnStock_MouseHover);
             // 
             // btnDashboard
             // 
@@ -323,6 +328,8 @@
             this.btnDashboard.TabIndex = 1;
             this.btnDashboard.Text = "ផ្ទាំ ងគ្រប់គ្រងទិន្នន័យ";
             this.btnDashboard.UseVisualStyleBackColor = false;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            this.btnDashboard.MouseHover += new System.EventHandler(this.btnDashboard_MouseHover);
             // 
             // panelLogo
             // 
