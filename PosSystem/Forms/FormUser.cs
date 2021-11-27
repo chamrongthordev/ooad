@@ -322,5 +322,11 @@ namespace PosSystem.Forms
             txtPassword.Text = "";
             pictureBoxProfile.Image = Image.FromFile(fileSavePath);
         }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new FormMain().Show();
+        }
     }
 }
