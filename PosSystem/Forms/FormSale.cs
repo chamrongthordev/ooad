@@ -60,5 +60,11 @@ namespace PosSystem.Forms
             Hide();
             new FormLogin();
         }
+
+        private void btnSale_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new FormSale().Show();
+        }
     }
 }

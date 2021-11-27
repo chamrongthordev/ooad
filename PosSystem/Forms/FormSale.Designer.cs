@@ -29,17 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSale));
-            this.PanelBtnLoadStockFormWrapper = new System.Windows.Forms.Panel();
-            this.btnLoadStockForm = new System.Windows.Forms.Button();
-            this.lblMainTopTitle = new System.Windows.Forms.Label();
-            this.panelMainTitle = new System.Windows.Forms.Panel();
-            this.lblAmountUser = new System.Windows.Forms.Label();
-            this.lblCountUser = new System.Windows.Forms.Label();
-            this.panelCountUser = new System.Windows.Forms.Panel();
-            this.lblAmountProduct = new System.Windows.Forms.Label();
-            this.lblCountProduct = new System.Windows.Forms.Label();
-            this.panelCountStock = new System.Windows.Forms.Panel();
             this.panelChartTracking = new System.Windows.Forms.Panel();
+            this.panelView = new System.Windows.Forms.Panel();
+            this.panelSearch = new System.Windows.Forms.Panel();
             this.panelMain = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
             this.panelLogout = new System.Windows.Forms.Panel();
@@ -51,10 +43,6 @@
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelLeftSidebar = new System.Windows.Forms.Panel();
-            this.PanelBtnLoadStockFormWrapper.SuspendLayout();
-            this.panelMainTitle.SuspendLayout();
-            this.panelCountUser.SuspendLayout();
-            this.panelCountStock.SuspendLayout();
             this.panelChartTracking.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.panelLogout.SuspendLayout();
@@ -63,133 +51,39 @@
             this.panelLeftSidebar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // PanelBtnLoadStockFormWrapper
-            // 
-            this.PanelBtnLoadStockFormWrapper.Controls.Add(this.btnLoadStockForm);
-            this.PanelBtnLoadStockFormWrapper.Dock = System.Windows.Forms.DockStyle.Right;
-            this.PanelBtnLoadStockFormWrapper.Location = new System.Drawing.Point(997, 0);
-            this.PanelBtnLoadStockFormWrapper.Name = "PanelBtnLoadStockFormWrapper";
-            this.PanelBtnLoadStockFormWrapper.Padding = new System.Windows.Forms.Padding(0, 40, 20, 40);
-            this.PanelBtnLoadStockFormWrapper.Size = new System.Drawing.Size(322, 152);
-            this.PanelBtnLoadStockFormWrapper.TabIndex = 2;
-            // 
-            // btnLoadStockForm
-            // 
-            this.btnLoadStockForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(114)))), ((int)(((byte)(215)))));
-            this.btnLoadStockForm.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnLoadStockForm.Font = new System.Drawing.Font("Battambang", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnLoadStockForm.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnLoadStockForm.Location = new System.Drawing.Point(23, 40);
-            this.btnLoadStockForm.Name = "btnLoadStockForm";
-            this.btnLoadStockForm.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.btnLoadStockForm.Size = new System.Drawing.Size(279, 72);
-            this.btnLoadStockForm.TabIndex = 2;
-            this.btnLoadStockForm.Text = "ពិនិត្យមើលផលិតផលក្នុងស្តុក";
-            this.btnLoadStockForm.UseVisualStyleBackColor = false;
-            // 
-            // lblMainTopTitle
-            // 
-            this.lblMainTopTitle.AutoSize = true;
-            this.lblMainTopTitle.Font = new System.Drawing.Font("Battambang", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblMainTopTitle.Location = new System.Drawing.Point(49, 40);
-            this.lblMainTopTitle.Name = "lblMainTopTitle";
-            this.lblMainTopTitle.Size = new System.Drawing.Size(164, 77);
-            this.lblMainTopTitle.TabIndex = 0;
-            this.lblMainTopTitle.Text = "ទិន្នន័យ";
-            // 
-            // panelMainTitle
-            // 
-            this.panelMainTitle.BackColor = System.Drawing.Color.White;
-            this.panelMainTitle.Controls.Add(this.PanelBtnLoadStockFormWrapper);
-            this.panelMainTitle.Controls.Add(this.lblMainTopTitle);
-            this.panelMainTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMainTitle.Location = new System.Drawing.Point(0, 0);
-            this.panelMainTitle.Name = "panelMainTitle";
-            this.panelMainTitle.Size = new System.Drawing.Size(1319, 152);
-            this.panelMainTitle.TabIndex = 0;
-            // 
-            // lblAmountUser
-            // 
-            this.lblAmountUser.AutoSize = true;
-            this.lblAmountUser.Font = new System.Drawing.Font("Cambria", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblAmountUser.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblAmountUser.Location = new System.Drawing.Point(143, 109);
-            this.lblAmountUser.Name = "lblAmountUser";
-            this.lblAmountUser.Size = new System.Drawing.Size(57, 38);
-            this.lblAmountUser.TabIndex = 1;
-            this.lblAmountUser.Text = "50";
-            this.lblAmountUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblCountUser
-            // 
-            this.lblCountUser.AutoSize = true;
-            this.lblCountUser.Font = new System.Drawing.Font("Khmer OS Battambang", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblCountUser.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblCountUser.Location = new System.Drawing.Point(60, 26);
-            this.lblCountUser.Name = "lblCountUser";
-            this.lblCountUser.Size = new System.Drawing.Size(234, 41);
-            this.lblCountUser.TabIndex = 0;
-            this.lblCountUser.Text = "ចំនួនអ្នកប្រើប្រាស់សរុប";
-            // 
-            // panelCountUser
-            // 
-            this.panelCountUser.BackColor = System.Drawing.Color.Maroon;
-            this.panelCountUser.Controls.Add(this.lblAmountUser);
-            this.panelCountUser.Controls.Add(this.lblCountUser);
-            this.panelCountUser.Location = new System.Drawing.Point(70, 50);
-            this.panelCountUser.Name = "panelCountUser";
-            this.panelCountUser.Size = new System.Drawing.Size(346, 232);
-            this.panelCountUser.TabIndex = 0;
-            // 
-            // lblAmountProduct
-            // 
-            this.lblAmountProduct.AutoSize = true;
-            this.lblAmountProduct.Font = new System.Drawing.Font("Cambria", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblAmountProduct.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblAmountProduct.Location = new System.Drawing.Point(135, 109);
-            this.lblAmountProduct.Name = "lblAmountProduct";
-            this.lblAmountProduct.Size = new System.Drawing.Size(77, 38);
-            this.lblAmountProduct.TabIndex = 2;
-            this.lblAmountProduct.Text = "321";
-            this.lblAmountProduct.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblCountProduct
-            // 
-            this.lblCountProduct.AutoSize = true;
-            this.lblCountProduct.Font = new System.Drawing.Font("Khmer OS Battambang", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblCountProduct.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblCountProduct.Location = new System.Drawing.Point(43, 26);
-            this.lblCountProduct.Name = "lblCountProduct";
-            this.lblCountProduct.Size = new System.Drawing.Size(266, 41);
-            this.lblCountProduct.TabIndex = 1;
-            this.lblCountProduct.Text = "ចំនួនផលិតផលនៅក្នុងស្តុក";
-            // 
-            // panelCountStock
-            // 
-            this.panelCountStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.panelCountStock.Controls.Add(this.lblAmountProduct);
-            this.panelCountStock.Controls.Add(this.lblCountProduct);
-            this.panelCountStock.Location = new System.Drawing.Point(439, 50);
-            this.panelCountStock.Name = "panelCountStock";
-            this.panelCountStock.Size = new System.Drawing.Size(346, 232);
-            this.panelCountStock.TabIndex = 1;
-            // 
             // panelChartTracking
             // 
-            this.panelChartTracking.Controls.Add(this.panelCountStock);
-            this.panelChartTracking.Controls.Add(this.panelCountUser);
+            this.panelChartTracking.Controls.Add(this.panelView);
+            this.panelChartTracking.Controls.Add(this.panelSearch);
             this.panelChartTracking.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChartTracking.Location = new System.Drawing.Point(0, 152);
+            this.panelChartTracking.Location = new System.Drawing.Point(0, 0);
             this.panelChartTracking.Name = "panelChartTracking";
-            this.panelChartTracking.Size = new System.Drawing.Size(1319, 670);
+            this.panelChartTracking.Size = new System.Drawing.Size(1319, 822);
             this.panelChartTracking.TabIndex = 1;
+            // 
+            // panelView
+            // 
+            this.panelView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.panelView.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelView.Location = new System.Drawing.Point(0, 76);
+            this.panelView.Name = "panelView";
+            this.panelView.Size = new System.Drawing.Size(567, 746);
+            this.panelView.TabIndex = 1;
+            // 
+            // panelSearch
+            // 
+            this.panelSearch.BackColor = System.Drawing.Color.Gray;
+            this.panelSearch.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSearch.Location = new System.Drawing.Point(0, 0);
+            this.panelSearch.Name = "panelSearch";
+            this.panelSearch.Size = new System.Drawing.Size(1319, 76);
+            this.panelSearch.TabIndex = 0;
             // 
             // panelMain
             // 
             this.panelMain.AutoScroll = true;
             this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.panelMain.Controls.Add(this.panelChartTracking);
-            this.panelMain.Controls.Add(this.panelMainTitle);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(426, 136);
             this.panelMain.Name = "panelMain";
@@ -290,6 +184,7 @@
             this.btnSale.TabIndex = 3;
             this.btnSale.Text = " កា​រលក់";
             this.btnSale.UseVisualStyleBackColor = false;
+            this.btnSale.Click += new System.EventHandler(this.btnSale_Click);
             // 
             // btnStock
             // 
@@ -371,13 +266,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormSale";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.PanelBtnLoadStockFormWrapper.ResumeLayout(false);
-            this.panelMainTitle.ResumeLayout(false);
-            this.panelMainTitle.PerformLayout();
-            this.panelCountUser.ResumeLayout(false);
-            this.panelCountUser.PerformLayout();
-            this.panelCountStock.ResumeLayout(false);
-            this.panelCountStock.PerformLayout();
             this.panelChartTracking.ResumeLayout(false);
             this.panelMain.ResumeLayout(false);
             this.panelLogout.ResumeLayout(false);
@@ -390,17 +278,6 @@
         }
 
         #endregion
-
-        private Panel PanelBtnLoadStockFormWrapper;
-        private Button btnLoadStockForm;
-        private Label lblMainTopTitle;
-        private Panel panelMainTitle;
-        private Label lblAmountUser;
-        private Label lblCountUser;
-        private Panel panelCountUser;
-        private Label lblAmountProduct;
-        private Label lblCountProduct;
-        private Panel panelCountStock;
         private Panel panelChartTracking;
         private Panel panelMain;
         private Button btnLogout;
@@ -413,5 +290,7 @@
         private Button btnDashboard;
         private Panel panelLogo;
         private Panel panelLeftSidebar;
+        private Panel panelSearch;
+        private Panel panelView;
     }
 }
