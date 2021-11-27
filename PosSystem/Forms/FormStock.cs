@@ -128,6 +128,31 @@ namespace PosSystem.Forms
                 formMessageBoxInfo.SetInfo("សូមបញ្ចូលលេខ ចំនួនផលិតផល", "warning");
                 formMessageBoxInfo.ShowDialog();
             }
+
+            else
+            {
+                if (productService.productRepository.FindByBarcode(txtProductBarcode.Text) == false)
+                {
+                    FormMessageBoxInfo _formMessageBoxInfo = new FormMessageBoxInfo();
+                    _formMessageBoxInfo.SetInfo("លេខ barcode ត្រូវបានប្រើប្រាស់រួចរាល់ហើយ", "warning");
+                    _formMessageBoxInfo.ShowDialog();
+                }
+
+                else
+                {
+                    Product product = new Product();
+                    product._ProductName = txtProductName.Text;
+                    product._ProductBarcode = int.Parse(txtProductBarcode.Text);
+                    product._ProductPrice = decimal.Parse(txtProductPrice.Text);
+                    product._ProductQuantity = int.Parse(txtProductQuantity.Text);
+                    product._ProductImage = fileSavePath;
+                    productService.productRepository.Save(product);
+                    FormMessageBoxInfo _formMessageBoxInfo = new FormMessageBoxInfo();
+                    _formMessageBoxInfo.SetInfo("ទិន្នន័យនេះត្រូវបានបញ្ចូលដោយជោគជ័យ", "success");
+                    _formMessageBoxInfo.ShowDialog();
+                    _GetAllProducts();
+                }
+            }
         }
         private void pictureBoxProfile_Click(object sender, EventArgs e)
         {
@@ -224,6 +249,16 @@ namespace PosSystem.Forms
         private void txtSearchBox_KeyUp(object sender, KeyEventArgs e)
         {
             _FilterProduct();
+        }
+
+        private void dgvStock_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtProductName.Text = dgvStock.CurrentRow.Cells[1].Value.ToString();
+            txtProductBarcode.Text = dgvStock.CurrentRow.Cells[2].Value.ToString();
+            txtProductPrice.Text = dgvStock.CurrentRow.Cells[3].Value.ToString();
+            txtProductQuantity.Text = dgvStock.CurrentRow.Cells[4].Value.ToString();
+
+            pictureBoxProfile.Image = (Bitmap)dgvStock.CurrentRow.Cells[0].Value;
         }
     }
 }

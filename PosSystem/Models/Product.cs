@@ -15,6 +15,8 @@ namespace PosSystem.Models
         public int _ProductQuantity { get; set; }
         public string _ProductImage { get; set; }
 
+        public Product() { }
+
         public Product(int Id, string productName, int productBarcode, decimal productPrice, int productQuantity, string productImage)
         {
             _ProductName = productName;

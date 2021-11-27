@@ -88,5 +88,10 @@ namespace PosSystem.Utils
         {
             return $"UPDATE {tableName} SET User_Status = '0' WHERE {column} = '{value}'";
         }
+
+        public static string SaveProduct(string tableName, string productName, int productBarcode, decimal productPrice, int productQuantity, string imagePath)
+        {
+            return $"INSERT INTO {tableName} (Product_Name, Product_Barcode, Product_Price, Product_Qty, Product_Image) VALUES (N'{productName}', '{productBarcode}', '{productPrice}', '{productQuantity}',N'{imagePath}')";
+        }
     }
 }

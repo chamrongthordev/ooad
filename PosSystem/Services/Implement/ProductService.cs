@@ -88,14 +88,64 @@ namespace PosSystem.Services.Implement
             return productLists;
         }
 
-        public void Save(Product TObject)
+        public void Save(Product product)
         {
-            throw new NotImplementedException();
+            conn.connection.Open();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand(GenerateCommand.SaveProduct("tblProducts", product._ProductName, product._ProductBarcode, product._ProductPrice, product._ProductQuantity, product._ProductImage), conn.connection);
+                SqlDataReader products = cmd.ExecuteReader();
+                conn.connection.Close();
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show(e.ToString());
+            }
         }
 
         public void UpdateBy(User user, string username)
         {
             throw new NotImplementedException();
+        }
+
+        public bool FindByBarcode(string barcode)
+        {
+            conn.connection.Open();
+            List<Product> productLists = new List<Product>();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand(GenerateCommand.GetAllWhereOneColumn("tblProducts", "[Product_Barcode]", barcode), conn.connection);
+                SqlDataReader products = cmd.ExecuteReader();
+
+                while (products.Read())
+                {
+                    int id = int.Parse(products[0].ToString());
+                    string productName = products[1].ToString();
+                    int productBarcode = int.Parse(products[2].ToString());
+                    decimal productPrice = decimal.Parse(products[3].ToString());
+                    int productQuantity = int.Parse(products[4].ToString());
+                    string productImage = products[5].ToString();
+
+                    Product product = new Product(id, productName, productBarcode, productPrice, productQuantity, productImage);
+                    productLists.Add(product);
+                }
+                products.Close();
+                conn.connection.Close();
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show(e.ToString());
+            }
+
+            if(productLists.Count > 0)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }
